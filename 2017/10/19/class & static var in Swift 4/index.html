@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Swift 4," />
 
 
 
@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="#class &amp;amp; static var in Swift 4  You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to overr">
+<meta name="description" content="You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to override the superclass’s implementation">
+<meta name="keywords" content="Swift 4">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="class &amp; static var in Swift 4">
 <meta property="og:url" content="http://yoursite.com/2017/10/19/class & static var in Swift 4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#class &amp;amp; static var in Swift 4  You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to overr">
-<meta property="og:updated_time" content="2017-10-19T14:23:52.000Z">
+<meta property="og:description" content="You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to override the superclass’s implementation">
+<meta property="og:updated_time" content="2017-10-19T14:38:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="#class &amp;amp; static var in Swift 4  You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to overr">
+<meta name="twitter:title" content="class &amp; static var in Swift 4">
+<meta name="twitter:description" content="You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to override the superclass’s implementation">
 
 
 
@@ -124,7 +125,7 @@
 
 
 
-  <title> | Hexo</title>
+  <title>class & static var in Swift 4 | Hexo</title>
   
 
 
@@ -248,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">class & static var in Swift 4</h1>
         
 
         <div class="post-meta">
@@ -260,7 +261,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-19T22:23:52+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-19T22:37:50+08:00">
                 2017-10-19
               </time>
             
@@ -298,9 +299,8 @@
       
 
       
-        <p>#class &amp; static var in Swift 4</p>
-<blockquote>
-<p>You define type properties with the <font color="green">static</font> keyword. For <font color="red">computed</font> type properties for class types, you can use the <font color="red">class</font> keyword instead to <font color="red">allow subclasses to override the superclass’s implementation</font>. The example below shows the syntax for stored and computed type properties:</p>
+        <blockquote>
+<p>You define type properties with the <font color="green">static</font> keyword. For <font color="green">computed</font> type properties for class types, you can use the <font color="green">class</font> keyword instead to <font color="green">allow subclasses to override the superclass’s implementation</font>. The example below shows the syntax for stored and computed type properties:</p>
 </blockquote>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SomeStructure</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> storedTypeProperty = <span class="string">"Some value."</span></div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> computedTypeProperty: <span class="type">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">enum</span> <span class="title">SomeEnumeration</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> storedTypeProperty = <span class="string">"Some value."</span></div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> computedTypeProperty: <span class="type">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">6</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> storedTypeProperty = <span class="string">"Some value."</span></div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> computedTypeProperty: <span class="type">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">27</span></div><div class="line">    &#125;</div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">var</span> <span class="title">overrideableComputedTypeProperty</span>: <span class="title">Int</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">107</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <blockquote>
@@ -322,6 +322,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Swift-4/" rel="tag"># Swift 4</a>
+          
+        </div>
       
 
       
@@ -400,6 +406,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">Tags</span>
+                
+              </div>
             
 
           </nav>
