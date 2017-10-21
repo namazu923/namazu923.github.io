@@ -259,6 +259,134 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/21/IBDesignable-and-IBInspectable/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鯰">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鯰">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/21/IBDesignable-and-IBInspectable/" itemprop="url">@IBDesignable and @IBInspectable</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-21T13:05:41+08:00">
+                2017-10-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>@IBDesignable and @IBInspectable is used for <strong>Live Rendering</strong> in Interface Builder</p>
+<blockquote>
+<p>You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.</p>
+<p>When you create a custom view that inherits from the UIView class or the NSView class, you can add the <font color="blue">@IBDesignable</font> attribute just before the class declaration. After you add the custom view to Interface Builder (by setting the custom class of the view in the inspector pane), Interface Builder renders your view in the canvas.</p>
+<p>You can also add the <font color="blue">@IBInspectable</font> attribute to properties with types compatible with user defined runtime attributes. After you add your custom view to Interface Builder, you can edit these properties in the inspector.</p>
+</blockquote>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@IBDesignable</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyCustomView</span>: <span class="title">UIView</span> </span>&#123;</div><div class="line"><span class="meta">@IBInspectable</span> <span class="keyword">var</span> textColor: <span class="type">UIColor</span></div><div class="line"><span class="meta">@IBInspectable</span> <span class="keyword">var</span> iconHeight: <span class="type">CGFloat</span></div><div class="line"><span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>Reference:<br><a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/WritingSwiftClassesWithObjective-CBehavior.html" target="_blank" rel="external"><font color="blue">Live Rendering</font></a><br><a href="https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/ImplementingACustomControl.html" target="_blank" rel="external"><font color="blue">Implement a Custom Control</font></a><br><a href="https://developer.apple.com/videos/play/wwdc2015/407/" target="_blank" rel="external"><font color="blue">WWDC2015: Implementing UI Designs in Interface Builder</font></a><br><a href="http://www.jianshu.com/p/83161b02b792" target="_blank" rel="external"><font color="blue">IBDesignable和IBInspectable</font></a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/21/StoryBoard-Tips/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -464,7 +592,7 @@
 <p>NOTE</p>
 <p>The computed type property examples above are for read-only computed type properties, but you can also define read-write computed type properties with the same syntax as for computed instance properties.</p>
 </blockquote>
-<p>Reference: <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html" target="_blank" rel="external">The Swift Programming Language (Swift 4)</a></p>
+<p>Reference: <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html" target="_blank" rel="external"><font color="blue">The Swift Programming Language (Swift 4)</font></a></p>
 
           
         
@@ -546,7 +674,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
