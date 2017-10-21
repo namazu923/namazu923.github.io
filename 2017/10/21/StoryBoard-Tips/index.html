@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Swift 4," />
+  <meta name="keywords" content="StoryBoard," />
 
 
 
@@ -79,18 +79,22 @@
 
 
 
-<meta name="description" content="You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to override the superclass’s implementation">
-<meta name="keywords" content="Swift 4">
+<meta name="description" content="In Xcode 9 Stacked ViewsIf there are views stacked on views, just move your mouse over a control, and then do control + shift + click to get a whole list of all the contents and find the right one. Ad">
+<meta name="keywords" content="StoryBoard">
 <meta property="og:type" content="article">
-<meta property="og:title" content="class &amp; static var in Swift 4">
-<meta property="og:url" content="http://yoursite.com/2017/10/19/class & static var in Swift 4/index.html">
+<meta property="og:title" content="StoryBoard Tips">
+<meta property="og:url" content="http://yoursite.com/2017/10/21/StoryBoard-Tips/index.html">
 <meta property="og:site_name" content="鯰">
-<meta property="og:description" content="You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to override the superclass’s implementation">
+<meta property="og:description" content="In Xcode 9 Stacked ViewsIf there are views stacked on views, just move your mouse over a control, and then do control + shift + click to get a whole list of all the contents and find the right one. Ad">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-19T14:43:45.000Z">
+<meta property="og:image" content="https://github.com/namazu923/namazu923.github.io/blob/hexo/source/images/StoryBoard_Tips/Stacked_Views.jpeg?raw=true">
+<meta property="og:image" content="https://github.com/namazu923/namazu923.github.io/blob/hexo/source/images/StoryBoard_Tips/Guide_Line.jpeg?raw=true">
+<meta property="og:image" content="https://github.com/namazu923/namazu923.github.io/blob/hexo/source/images/StoryBoard_Tips/View_Margin.jpeg?raw=true">
+<meta property="og:updated_time" content="2017-10-21T04:54:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="class &amp; static var in Swift 4">
-<meta name="twitter:description" content="You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to override the superclass’s implementation">
+<meta name="twitter:title" content="StoryBoard Tips">
+<meta name="twitter:description" content="In Xcode 9 Stacked ViewsIf there are views stacked on views, just move your mouse over a control, and then do control + shift + click to get a whole list of all the contents and find the right one. Ad">
+<meta name="twitter:image" content="https://github.com/namazu923/namazu923.github.io/blob/hexo/source/images/StoryBoard_Tips/Stacked_Views.jpeg?raw=true">
 
 
 
@@ -120,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/19/class & static var in Swift 4/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/21/StoryBoard-Tips/"/>
 
 
 
 
 
-  <title>class & static var in Swift 4 | 鯰</title>
+  <title>StoryBoard Tips | 鯰</title>
   
 
 
@@ -263,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/19/class & static var in Swift 4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/21/StoryBoard-Tips/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="鯰">
@@ -280,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">class & static var in Swift 4</h1>
+          <h1 class="post-title" itemprop="name headline">StoryBoard Tips</h1>
         
 
         <div class="post-meta">
@@ -292,8 +296,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-19T22:37:50+08:00">
-                2017-10-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-21T11:49:09+08:00">
+                2017-10-21
               </time>
             
 
@@ -330,15 +334,13 @@
       
 
       
-        <blockquote>
-<p>You define type properties with the <font color="blue">static</font> keyword. For <font color="blue">computed</font> type properties for class types, you can use the <font color="blue">class</font> keyword instead to <font color="blue">allow subclasses to override the superclass’s implementation</font>. The example below shows the syntax for stored and computed type properties:</p>
-</blockquote>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SomeStructure</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> storedTypeProperty = <span class="string">"Some value."</span></div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> computedTypeProperty: <span class="type">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">enum</span> <span class="title">SomeEnumeration</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> storedTypeProperty = <span class="string">"Some value."</span></div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> computedTypeProperty: <span class="type">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">6</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> storedTypeProperty = <span class="string">"Some value."</span></div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> computedTypeProperty: <span class="type">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">27</span></div><div class="line">    &#125;</div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">var</span> <span class="title">overrideableComputedTypeProperty</span>: <span class="title">Int</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">107</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>NOTE</p>
-<p>The computed type property examples above are for read-only computed type properties, but you can also define read-write computed type properties with the same syntax as for computed instance properties.</p>
-</blockquote>
-<p>Reference: <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html" target="_blank" rel="external">The Swift Programming Language (Swift 4)</a></p>
+        <p>In <strong>Xcode 9</strong></p>
+<h1 id="Stacked-Views"><a href="#Stacked-Views" class="headerlink" title="Stacked Views"></a>Stacked Views</h1><p>If there are views stacked on views, just move your mouse over a control, and then do <strong>control + shift + click</strong> to get a whole list of all the contents and find the right one.<br><img src="https://github.com/namazu923/namazu923.github.io/blob/hexo/source/images/StoryBoard_Tips/Stacked_Views.jpeg?raw=true" alt=""></p>
+<h1 id="Add-Guide-Line"><a href="#Add-Guide-Line" class="headerlink" title="Add Guide Line"></a>Add Guide Line</h1><ul>
+<li>Use <strong>Cmd + Minus</strong> to create Horizontal Guide</li>
+<li>Use <strong>Ctrl + Cmd + |</strong> to create Vertical Guide<br><img src="https://github.com/namazu923/namazu923.github.io/blob/hexo/source/images/StoryBoard_Tips/Guide_Line.jpeg?raw=true" alt=""></li>
+</ul>
+<h1 id="Show-View-margin"><a href="#Show-View-margin" class="headerlink" title="Show View margin"></a>Show View margin</h1><p>select the control, press <strong>Option</strong> and then move mouse to another control, then will shows the margins of two controls<br><img src="https://github.com/namazu923/namazu923.github.io/blob/hexo/source/images/StoryBoard_Tips/View_Margin.jpeg?raw=true" alt=""></p>
 
       
     </div>
@@ -356,7 +358,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Swift-4/" rel="tag"># Swift 4</a>
+            <a href="/tags/StoryBoard/" rel="tag"># StoryBoard</a>
           
         </div>
       
@@ -369,15 +371,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/10/19/class & static var in Swift 4/" rel="next" title="class & static var in Swift 4">
+                <i class="fa fa-chevron-left"></i> class & static var in Swift 4
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/21/StoryBoard-Tips/" rel="prev" title="StoryBoard Tips">
-                StoryBoard Tips <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -429,8 +431,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -483,6 +494,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Stacked-Views"><span class="nav-number">1.</span> <span class="nav-text">Stacked Views</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Add-Guide-Line"><span class="nav-number">2.</span> <span class="nav-text">Add Guide Line</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Show-View-margin"><span class="nav-number">3.</span> <span class="nav-text">Show View margin</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
