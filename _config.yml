@@ -5,7 +5,7 @@
 # Site
 title: 鯰
 subtitle:
-description: 
+description:
 author: 鯰
 language: en
 timezone:
@@ -80,3 +80,10 @@ deploy:
   type: git
   repository: https://github.com/namazu923/namazu923.github.io.git
   branch: master
+
+# Algolia
+algolia:
+  applicationID: '4PVD6KXJLJ'
+  apiKey: 'cb3fa21123f0e4a9bbd24f9f50bb3a55'
+  indexName: prod_namazu
+  chunkSize: 5000
