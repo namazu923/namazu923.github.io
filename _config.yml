@@ -87,3 +87,13 @@ algolia:
   apiKey: 'cb3fa21123f0e4a9bbd24f9f50bb3a55'
   indexName: prod_namazu
   chunkSize: 5000
+  fields:
+    - title
+    - slug
+    - path
+    - categories
+    - tags
+    - content:strip
+    - date
+    - updated
+	
