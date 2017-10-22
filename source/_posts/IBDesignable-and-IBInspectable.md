@@ -1,16 +1,19 @@
 ---
 title: '@IBDesignable and @IBInspectable'
 date: 2017-10-21 13:05:41
-tags:
+tags: StoryBoard
+categories: Interface Builder
 ---
 
 @IBDesignable and @IBInspectable is used for **Live Rendering** in Interface Builder
+{% note info %}
+You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.
 
->You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.
->
->When you create a custom view that inherits from the UIView class or the NSView class, you can add the <font color=blue>@IBDesignable</font> attribute just before the class declaration. After you add the custom view to Interface Builder (by setting the custom class of the view in the inspector pane), Interface Builder renders your view in the canvas.
->
->You can also add the <font color=blue>@IBInspectable</font> attribute to properties with types compatible with user defined runtime attributes. After you add your custom view to Interface Builder, you can edit these properties in the inspector.
+<!-- more -->
+When you create a custom view that inherits from the UIView class or the NSView class, you can add the <font color=blue>@IBDesignable</font> attribute just before the class declaration. After you add the custom view to Interface Builder (by setting the custom class of the view in the inspector pane), Interface Builder renders your view in the canvas.
+
+You can also add the <font color=blue>@IBInspectable</font> attribute to properties with types compatible with user defined runtime attributes. After you add your custom view to Interface Builder, you can edit these properties in the inspector.
+{% endnote %}
 
 ```swift
 @IBDesignable
