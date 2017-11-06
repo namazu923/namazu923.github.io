@@ -66,5 +66,27 @@ wwdc2016/419/{% endnote %}
 	{% note info %} wwdc2016/416 {% endnote %}
 	
 # UIKit
-## Table View
+## UITableView
 * [A Closer Look at Table View Cells](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/TableView_iPhone/TableViewCells/TableViewCells.html#//apple_ref/doc/uid/TP40007451-CH7-SW1)
+
+### bug
+* [UITableView左划删除其他cell移动的bug](http://www.jianshu.com/p/19e667dc0c70)
+
+## UILabel
+### Bug
+* [Autolayout adding extra padding on top and bottom of UILabel iPhone 6/6+ when preferredMaxLayoutWidth is set](https://stackoverflow.com/questions/26918756/autolayout-adding-extra-padding-on-top-and-bottom-of-uilabel-iphone-6-6-when-pr)
+
+# Animation
+## Autolayout
+### Bug
+* [How do I animate constraint changes?](https://stackoverflow.com/questions/12622424/how-do-i-animate-constraint-changes)
+
+# Pods
+* [SnapKit](http://snapkit.io/docs/)  
+	{% note info %}
+SnapKit is a DSL to make Auto Layout easy on both iOS and OS X. {% endnote %}
+
+# App Store
+* [Viewing and Changing Your App’s Status and Availability](https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/ChangingAppStatus.html#//apple_ref/doc/uid/TP40011225-CH30-SW1)
+* [アプリケーションの状態と提供可否の表示および変更](https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide_Jpn/Chapters/ChangingAppStatus.html#//apple_ref/doc/uid/TP40014483-CH30-SW1)
+* [查看和更改 App 的状态和可用性](https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide_zh_CN/Chapters/ChangingAppStatus.html#//apple_ref/doc/uid/TP40016325-CH30-SW1)

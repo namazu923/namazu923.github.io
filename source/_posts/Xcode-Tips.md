@@ -18,6 +18,9 @@ categories:
 ## Designate where to show a class in the navigator
 * Use **Option + Shift** to click the file in the navigator and then select the area.
 <!-- more -->
+## Fold
+* **Cmd + Option + LeftArrow / RightArrow**
+
 # Break Point
 ## Delete the break point
 * **Cmd + \\**
