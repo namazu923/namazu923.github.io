@@ -3,8 +3,8 @@ title: WWDC List
 comments: true
 date: 2017-10-29 10:48:34
 updated:
-tags:
-categories:
+tags: WWDC
+categories: iOS
 ---
 
 # What's New

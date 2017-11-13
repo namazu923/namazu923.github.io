@@ -99,7 +99,13 @@ wwdc2016/419/{% endnote %}
 
 * [SnapKit](http://snapkit.io/docs/)  
 	{% note info %}
-SnapKit is a DSL to make Auto Layout easy on both iOS and OS X. {% endnote %}
+SnapKit is a DSL to make **Auto Layout** easy on both iOS and OS X. {% endnote %}
+
+* [SwiftyUserDefaults](https://github.com/radex/SwiftyUserDefaults).  
+	{% note info %}
+Modern Swift API for `NSUserDefaults`
+
+SwiftyUserDefaults makes user defaults enjoyable to use by combining expressive Swifty API with the benefits of static typing. Define your keys in one place, use value types easily, and get extra safety and convenient compile-time checks for free. {% endnote %}
 
 ---
 # App Store
