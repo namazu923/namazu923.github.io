@@ -100,6 +100,20 @@ categories: iOS
 * [What’s New in Swift Playgrounds](https://developer.apple.com/videos/play/wwdc2017/408/)
 
  `wwdc2017/408/`
+
+# Programing
+
+* [Protocol and Value Oriented Programming in UIKit Apps](https://developer.apple.com/videos/play/wwdc2016/419/)  
+
+	`wwdc2016/419/`
+	
+	* [Building Better Apps with Value Types in Swift](https://developer.apple.com/videos/play/wwdc2015/414/)
+	
+		`wwdc2015/414/`
+		
+	* [Protocol-Oriented Programming in Swift](https://developer.apple.com/videos/play/wwdc2015/408/)
+	
+		`wwdc2015/408/`
  
 # Prototype
 * [60 Second Prototyping](https://developer.apple.com/videos/play/wwdc2017/818/)
@@ -110,6 +124,15 @@ categories: iOS
 * [iOS Storage Best Practices](https://developer.apple.com/videos/play/fall2017/204/)
 
  `fall2017/204/`
+
+# Swift
+* [Swift API Design Guidelines](https://developer.apple.com/videos/play/wwdc2016/403/)
+
+  `wwdc2016/403/`
+
+* [Understanding Swift Performance](https://developer.apple.com/videos/play/wwdc2016/416/)
+
+	`wwdc2016/416`
 
 # Thread
 ## GCD

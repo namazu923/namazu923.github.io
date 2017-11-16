@@ -43,37 +43,6 @@ Markup for playgrounds includes page level formatting for headings and other ele
 {% endnote %}
 
 ---
-# Design Pattern
-
-* [Swift API Design Guidelines](https://developer.apple.com/videos/play/wwdc2016/403/)
-
-	{% note info %}
-wwdc2016/403/{% endnote %}
-
-* [Protocol and Value Oriented Programming in UIKit Apps](https://developer.apple.com/videos/play/wwdc2016/419/)  
-
-	{% note info %}
-wwdc2016/419/{% endnote %}
-	
-	* [Building Better Apps with Value Types in Swift](https://developer.apple.com/videos/play/wwdc2015/414/)
-	
-		{% note info %}
-		wwdc2015/414/ {% endnote %}
-		
-	* [Protocol-Oriented Programming in Swift](https://developer.apple.com/videos/play/wwdc2015/408/)
-	
-		{% note info %}
-		wwdc2015/408/ {% endnote %}
-
----
-# Performance
-
-* [Understanding Swift Performance](https://developer.apple.com/videos/play/wwdc2016/416/)
-
-	{% note info %} 
-	wwdc2016/416 {% endnote %}
-
----
 # UIKit
 
 ## UITableView
@@ -107,9 +76,37 @@ Modern Swift API for `NSUserDefaults`
 
 SwiftyUserDefaults makes user defaults enjoyable to use by combining expressive Swifty API with the benefits of static typing. Define your keys in one place, use value types easily, and get extra safety and convenient compile-time checks for free. {% endnote %}
 
+* [Alamofire](https://github.com/Alamofire/Alamofire)  
+	{% note info %}
+	Alamofire is an HTTP networking library written in Swift.
+	{% endnote %}
+	
+* [Kingfisher](https://github.com/onevcat/Kingfisher)  
+	{% note info %}
+Kingfisher is a lightweight, pure-Swift library for downloading and caching images from the web. This project is heavily inspired by the popular SDWebImage. It provides you a chance to use a pure-Swift alternative in your next app.
+	{% endnote %}
+* [Devicekit](https://github.com/dennisweissmann/DeviceKit)  
+	{% note info %}
+	DeviceKit is a value-type replacement of UIDevice.
+	{% endnote %}
+* [Pop](https://github.com/facebook/pop)  
+	{% note info %}
+Pop is an extensible animation engine for iOS, tvOS, and OS X. In addition to basic static animations, it supports spring and decay dynamic animations, making it useful for building realistic, physics-based interactions. The API allows quick integration with existing Objective-C or Swift codebases and enables the animation of any property on any object. It's a mature and well-tested framework that drives all the animations and transitions in Paper.
+	{% endnote %}
+* [SDWebImage](https://github.com/rs/SDWebImage)  
+	{% note info %}
+	This library provides an async image downloader with cache support. For convenience, we added categories for UI elements like UIImageView, UIButton, MKAnnotationView.
+	{% endnote %}
+* [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)  	
+	{% note info %}
+	SVProgressHUD is a clean and easy-to-use HUD meant to display the progress of an ongoing task on iOS and tvOS.
+	{% endnote %}
+
 ---
 # App Store
 
 * [Viewing and Changing Your App’s Status and Availability](https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/ChangingAppStatus.html#//apple_ref/doc/uid/TP40011225-CH30-SW1)
 * [アプリケーションの状態と提供可否の表示および変更](https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide_Jpn/Chapters/ChangingAppStatus.html#//apple_ref/doc/uid/TP40014483-CH30-SW1)
 * [查看和更改 App 的状态和可用性](https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide_zh_CN/Chapters/ChangingAppStatus.html#//apple_ref/doc/uid/TP40016325-CH30-SW1)
+
+* [Devices measured by the App Store ](https://developer.apple.com/support/app-store/)
