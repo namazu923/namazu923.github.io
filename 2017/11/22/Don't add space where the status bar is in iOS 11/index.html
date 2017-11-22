@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Swift 4," />
+  <meta name="keywords" content="iOS 11," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to override the superclass’s implementation.">
-<meta name="keywords" content="Swift 4">
+<meta name="description" content="setview.contentInsetAdjustmentBehavior = .never">
+<meta name="keywords" content="iOS 11">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Class &amp; Static var in Swift 4">
-<meta property="og:url" content="http://namazu923.github.io/2017/10/19/Class-&-Static-var-in-Swift 4/index.html">
+<meta property="og:title" content="Don&#39;t add space where the status bar is in iOS 11">
+<meta property="og:url" content="http://namazu923.github.io/2017/11/22/Don't add space where the status bar is in iOS 11/index.html">
 <meta property="og:site_name" content="鯰">
-<meta property="og:description" content="You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to override the superclass’s implementation.">
+<meta property="og:description" content="setview.contentInsetAdjustmentBehavior = .never">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-22T12:06:48.000Z">
+<meta property="og:updated_time" content="2017-11-22T13:19:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Class &amp; Static var in Swift 4">
-<meta name="twitter:description" content="You define type properties with the static keyword. For computed type properties for class types, you can use the class keyword instead to allow subclasses to override the superclass’s implementation.">
+<meta name="twitter:title" content="Don&#39;t add space where the status bar is in iOS 11">
+<meta name="twitter:description" content="setview.contentInsetAdjustmentBehavior = .never">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://namazu923.github.io/2017/10/19/Class-&-Static-var-in-Swift 4/"/>
+  <link rel="canonical" href="http://namazu923.github.io/2017/11/22/Don't add space where the status bar is in iOS 11/"/>
 
 
 
 
 
-  <title>Class & Static var in Swift 4 | 鯰</title>
+  <title>Don't add space where the status bar is in iOS 11 | 鯰</title>
   
 
 
@@ -291,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://namazu923.github.io/2017/10/19/Class-&-Static-var-in-Swift 4/">
+    <link itemprop="mainEntityOfPage" href="http://namazu923.github.io/2017/11/22/Don't add space where the status bar is in iOS 11/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="鯰">
@@ -308,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Class & Static var in Swift 4</h1>
+          <h1 class="post-title" itemprop="name headline">Don't add space where the status bar is in iOS 11</h1>
         
 
         <div class="post-meta">
@@ -320,8 +320,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-19T22:37:50+08:00">
-                2017-10-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-22T19:54:26+08:00">
+                2017-11-22
               </time>
             
 
@@ -343,8 +343,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Swift/" itemprop="url" rel="index">
-                    <span itemprop="name">Swift</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -361,9 +361,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/10/19/Class-&-Static-var-in-Swift 4/#comments" itemprop="discussionUrl">
+                <a href="/2017/11/22/Don't add space where the status bar is in iOS 11/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/19/Class-&-Static-var-in-Swift 4/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/11/22/Don't add space where the status bar is in iOS 11/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -391,12 +391,38 @@
       
 
       
-        <div class="note info"><p>You define type properties with the <font color="blue">static</font> keyword. For <font color="blue">computed</font> type properties for class types, you can use the <font color="blue">class</font> keyword instead to <font color="blue">allow subclasses to override the superclass’s implementation</font>. The example below shows the syntax for stored and computed type properties:</p></div>
+        <p>set<code>view.contentInsetAdjustmentBehavior = .never</code></p>
 <a id="more"></a>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SomeStructure</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> storedTypeProperty = <span class="string">"Some value."</span></div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> computedTypeProperty: <span class="type">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">enum</span> <span class="title">SomeEnumeration</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> storedTypeProperty = <span class="string">"Some value."</span></div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> computedTypeProperty: <span class="type">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">6</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> storedTypeProperty = <span class="string">"Some value."</span></div><div class="line">    <span class="keyword">static</span> <span class="keyword">var</span> computedTypeProperty: <span class="type">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">27</span></div><div class="line">    &#125;</div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">var</span> <span class="title">overrideableComputedTypeProperty</span>: <span class="title">Int</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">107</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<div class="note info"><p>NOTE</p>
-<p>The computed type property examples above are for read-only computed type properties, but you can also define read-write computed type properties with the same syntax as for computed instance properties.</p></div>
-<p>Reference: <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html" target="_blank" rel="external"><font color="blue">The Swift Programming Language (Swift 4)</font></a></p>
+<ul>
+<li><p>About <code>contentInsetAdjustmentBehavior</code>  </p>
+<blockquote>
+<p>This property specifies how the safe area insets are used to modify the content area of the scroll view. The default value of this property is automatic.</p>
+</blockquote>
+<ul>
+<li><p>case <strong>automatic</strong></p>
+<blockquote>
+<p>Automatically adjust the scroll view insets.</p>
+</blockquote>
+</li>
+<li><p>case <strong>scrollableAxes</strong></p>
+<blockquote>
+<p>Adjust the insets only in the scrollable directions.</p>
+</blockquote>
+</li>
+<li><p>case <strong>never</strong></p>
+<blockquote>
+<p>Do not adjust the scroll view insets.</p>
+</blockquote>
+</li>
+<li><p>case <strong>always</strong></p>
+<blockquote>
+<p>Always include the safe area insets in the content adjustment.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>Reference :<br>    <a href="https://developer.apple.com/documentation/uikit/uiscrollview/2902261-contentinsetadjustmentbehavior" target="_blank" rel="external">contentInsetAdjustmentBehavior</a></p>
 
       
     </div>
@@ -414,7 +440,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Swift-4/" rel="tag"># Swift 4</a>
+            <a href="/tags/iOS-11/" rel="tag"># iOS 11</a>
           
         </div>
       
@@ -427,15 +453,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/20/Raywenderlich_List/" rel="next" title="Raywenderlich_List">
+                <i class="fa fa-chevron-left"></i> Raywenderlich_List
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/21/StoryBoard-Tips/" rel="prev" title="StoryBoard Tips">
-                StoryBoard Tips <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -728,9 +754,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://namazu923.github.io/2017/10/19/Class-&-Static-var-in-Swift 4/';
-          this.page.identifier = '2017/10/19/Class-&-Static-var-in-Swift 4/';
-          this.page.title = 'Class & Static var in Swift 4';
+          this.page.url = 'http://namazu923.github.io/2017/11/22/Don't add space where the status bar is in iOS 11/';
+          this.page.identifier = '2017/11/22/Don't add space where the status bar is in iOS 11/';
+          this.page.title = 'Don\'t add space where the status bar is in iOS 11';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
