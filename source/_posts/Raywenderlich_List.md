@@ -6,7 +6,7 @@ updated:
 tags: List
 categories: Raywenderlich
 ---
-# Courses `0/403`
+# Courses `10/403`
 
 ## Saving Data `0/59`
 
@@ -28,9 +28,9 @@ categories: Raywenderlich
 * iOS App Extensions		`0/10`
 * Introducing iOS 9 Search APIs		`0/5`
 
-## Views and Layout `0/109`
+## Views and Layout `10/109`
 
-* Scroll View School		`0/34`			
+* Scroll View School		`10/34`			
 * Beginning Collection Views		`0/20`	
 * Beginning Auto Layout		`0/16`
 * Custom Collection View Layout		`0/13`
