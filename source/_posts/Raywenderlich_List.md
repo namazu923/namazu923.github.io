@@ -6,7 +6,7 @@ updated:
 tags: List
 categories: Raywenderlich
 ---
-# Courses `10/403`
+# Courses `20/403`
 
 ## Saving Data `0/59`
 
@@ -28,9 +28,20 @@ categories: Raywenderlich
 * iOS App Extensions		`0/10`
 * Introducing iOS 9 Search APIs		`0/5`
 
-## Views and Layout `10/109`
+## Views and Layout `20/109`
 
-* Scroll View School		`10/34`			
+* Scroll View School		`20/34`			
+	> 14 Embedding Layouts  
+	When move rootView into scrollview, to keep the constraints in the rootView.  
+	>> 1.move the rootView out of the controller  
+	2.add a new rootView in the controller, then add scrollView into new rootView  
+	3.move the old rootView into the scrollView
+	
+	> 18 Keyboard Insets  
+	Adjust scrollView content bottom due to Keyboard showing or not showing
+	
+	> 21 Paging Control
+
 * Beginning Collection Views		`0/20`	
 * Beginning Auto Layout		`0/16`
 * Custom Collection View Layout		`0/13`

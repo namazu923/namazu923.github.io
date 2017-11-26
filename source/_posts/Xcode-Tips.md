@@ -25,6 +25,9 @@ categories:
 ## Duplicate view in StoryBoard
 * **Cmd + D**
 
+## Make view size to fit
+* **Cmd + `=`**
+
 # Break Point
 ## Delete the break point
 * **Cmd + \\**
