@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Algolia," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="Check the /node_modules/hexo-algolia/lib/command.js, when Algolia can’t do search content by default.">
-<meta name="keywords" content="Algolia">
+<meta name="description" content="Create containerViewController containing both mainNavigationViewController(mainViewController‘s NavigationController) and slideMenuViewController  1.1 Child ViewController  let mainNavigationViewCon">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Make content search in Algolia">
-<meta property="og:url" content="http://namazu923.github.io/2017/10/22/Make-content-search-in-Algolia/index.html">
+<meta property="og:title" content="SlideMenu">
+<meta property="og:url" content="http://namazu923.github.io/2017/11/26/SlideMenu/index.html">
 <meta property="og:site_name" content="鯰">
-<meta property="og:description" content="Check the /node_modules/hexo-algolia/lib/command.js, when Algolia can’t do search content by default.">
+<meta property="og:description" content="Create containerViewController containing both mainNavigationViewController(mainViewController‘s NavigationController) and slideMenuViewController  1.1 Child ViewController  let mainNavigationViewCon">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-22T10:55:15.000Z">
+<meta property="og:updated_time" content="2017-11-26T05:37:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Make content search in Algolia">
-<meta name="twitter:description" content="Check the /node_modules/hexo-algolia/lib/command.js, when Algolia can’t do search content by default.">
+<meta name="twitter:title" content="SlideMenu">
+<meta name="twitter:description" content="Create containerViewController containing both mainNavigationViewController(mainViewController‘s NavigationController) and slideMenuViewController  1.1 Child ViewController  let mainNavigationViewCon">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://namazu923.github.io/2017/10/22/Make-content-search-in-Algolia/"/>
+  <link rel="canonical" href="http://namazu923.github.io/2017/11/26/SlideMenu/"/>
 
 
 
 
 
-  <title>Make content search in Algolia | 鯰</title>
+  <title>SlideMenu | 鯰</title>
   
 
 
@@ -291,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://namazu923.github.io/2017/10/22/Make-content-search-in-Algolia/">
+    <link itemprop="mainEntityOfPage" href="http://namazu923.github.io/2017/11/26/SlideMenu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="鯰">
@@ -308,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Make content search in Algolia</h1>
+          <h1 class="post-title" itemprop="name headline">SlideMenu</h1>
         
 
         <div class="post-meta">
@@ -320,8 +319,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-22T18:19:36+08:00">
-                2017-10-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T13:07:09+08:00">
+                2017-11-26
               </time>
             
 
@@ -331,28 +330,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -361,9 +338,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/10/22/Make-content-search-in-Algolia/#comments" itemprop="discussionUrl">
+                <a href="/2017/11/26/SlideMenu/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/22/Make-content-search-in-Algolia/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/11/26/SlideMenu/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -391,9 +368,54 @@
       
 
       
-        <p>Check the /node_modules/hexo-algolia/lib/command.js, when Algolia can’t do search content by default.<br><a id="more"></a><br>And in the file, check var <strong>INDEXED_PROPERTIES</strong>, as if there is not a <strong>‘content’</strong> value, add <strong>‘content’</strong> in the array.<br>In git bash, do <strong>‘hexo clean’</strong> to clean, and then <strong>‘hexo algolia’</strong> to regenerate data objects to Algolia.</p>
-<p>Try to search again.</p>
-<p>Hexo-Next v5.1.3 &amp; hexo-algolia : “^1.2.3”,</p>
+        <ol>
+<li><p>Create <code>containerViewController</code> containing both <code>mainNavigationViewController</code>(<code>mainViewController</code>‘s NavigationController) and <code>slideMenuViewController</code></p>
+<ul>
+<li><p>1.1 Child ViewController</p>
+<blockquote>
+<p>let <code>mainNavigationViewController</code> and <code>slideMenuViewController</code> be <code>containerViewController</code>‘s childViewController</p>
+</blockquote>
+<ul>
+<li><p>1.1.1 Add Child ViewController  </p>
+<blockquote>
+<p>containerView.addSubview(mainNavigationViewController.view)<br>addChildViewController(mainNavigationViewController)<br>mainNavigationViewController.didMove(toParentViewController: self)</p>
+</blockquote>
+</li>
+<li><p>1.1.2 Remove Child ViewController</p>
+<p>  &gt;<br>slideMenuViewController.view.removeFromSuperView()<br>slideMenuViewController = nil</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>Add UIGestureRecognizer to <code>mainNavigationViewController</code>  </p>
+<ul>
+<li><p>2.1 Show State</p>
+<blockquote>
+<p>judge slideMenuView’s show state(show/ not show)  </p>
+</blockquote>
+</li>
+<li><p>2.2 Dragging direction</p>
+<blockquote>
+<p>get gesture’s dragging direction by check whether<br><code>recognizer.velocity(in: view).x</code> is more or less than 0 </p>
+</blockquote>
+</li>
+<li><p>2.3 Move view</p>
+<blockquote>
+<p>move <code>recognizer.view</code> by setting <code>view.center.x</code> with <code>recognizer.translation(in: view).x</code></p>
+</blockquote>
+</li>
+<li>2.4 Receive Gesture Check<blockquote>
+<p>func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -&gt; Bool {}</p>
+<p>func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -&gt; Bool {}</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<p>–<br>Reference:<br><a href="https://www.raywenderlich.com/177353/create-slide-navigation-panel-swift" target="_blank" rel="external">How to Create Your Own Slide-Out Navigation Panel in Swift</a></p>
 
       
     </div>
@@ -409,12 +431,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Algolia/" rel="tag"># Algolia</a>
-          
-        </div>
-      
 
       
       
@@ -424,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/21/Xcode-Tips/" rel="next" title="Xcode Tips">
-                <i class="fa fa-chevron-left"></i> Xcode Tips
+              <a href="/2017/11/22/Don't add space where the status bar is in iOS 11/" rel="next" title="Don't add space where the status bar is in iOS 11">
+                <i class="fa fa-chevron-left"></i> Don't add space where the status bar is in iOS 11
               </a>
             
           </div>
@@ -433,10 +449,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/22/open-Terminal-in-Xcode-by-a-Short-Cut/" rel="prev" title="open Terminal in Xcode by a Short Cut">
-                open Terminal in Xcode by a Short Cut <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -729,9 +741,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://namazu923.github.io/2017/10/22/Make-content-search-in-Algolia/';
-          this.page.identifier = '2017/10/22/Make-content-search-in-Algolia/';
-          this.page.title = 'Make content search in Algolia';
+          this.page.url = 'http://namazu923.github.io/2017/11/26/SlideMenu/';
+          this.page.identifier = '2017/11/26/SlideMenu/';
+          this.page.title = 'SlideMenu';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
