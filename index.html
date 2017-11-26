@@ -368,57 +368,19 @@
 
       
         
-          
-            <ol>
+          <ol>
 <li><p>Create <code>containerViewController</code> containing both <code>mainNavigationViewController</code>(<code>mainViewController</code>‘s NavigationController) and <code>slideMenuViewController</code></p>
 <ul>
 <li><p>1.1 Child ViewController</p>
 <blockquote>
 <p>let <code>mainNavigationViewController</code> and <code>slideMenuViewController</code> be <code>containerViewController</code>‘s childViewController</p>
-</blockquote>
-<ul>
-<li><p>1.1.1 Add Child ViewController  </p>
-<blockquote>
-<p>containerView.addSubview(mainNavigationViewController.view)<br>addChildViewController(mainNavigationViewController)<br>mainNavigationViewController.didMove(toParentViewController: self)</p>
-</blockquote>
-</li>
-<li><p>1.1.2 Remove Child ViewController</p>
-<p>  &gt;<br>slideMenuViewController.view.removeFromSuperView()<br>slideMenuViewController = nil</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<ol>
-<li><p>Add UIGestureRecognizer to <code>mainNavigationViewController</code>  </p>
-<ul>
-<li><p>2.1 Show State</p>
-<blockquote>
-<p>judge slideMenuView’s show state(show/ not show)  </p>
-</blockquote>
-</li>
-<li><p>2.2 Dragging direction</p>
-<blockquote>
-<p>get gesture’s dragging direction by check whether<br><code>recognizer.velocity(in: view).x</code> is more or less than 0 </p>
-</blockquote>
-</li>
-<li><p>2.3 Move view</p>
-<blockquote>
-<p>move <code>recognizer.view</code> by setting <code>view.center.x</code> with <code>recognizer.translation(in: view).x</code></p>
-</blockquote>
-</li>
-<li>2.4 Receive Gesture Check<blockquote>
-<p>func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -&gt; Bool {}</p>
-<p>func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -&gt; Bool {}</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<p>–<br>Reference:<br><a href="https://www.raywenderlich.com/177353/create-slide-navigation-panel-swift" target="_blank" rel="external">How to Create Your Own Slide-Out Navigation Panel in Swift</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/26/SlideMenu/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
