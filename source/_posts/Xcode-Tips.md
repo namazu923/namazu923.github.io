@@ -28,6 +28,9 @@ categories:
 ## Make view size to fit
 * **Cmd + `=`**
 
+## Show emoji
+* **`Ctrl` + `Command` + `Space`**
+
 # Break Point
 ## Delete the break point
 * **Cmd + \\**
