@@ -329,6 +329,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Weekly-Summary/" itemprop="url" rel="index">
+                    <span itemprop="name">Weekly Summary</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -392,11 +414,17 @@
 <p>Optional information about the the notification.</p>
 </blockquote>
 </blockquote>
-<h2 id="3-Xcode"><a href="#3-Xcode" class="headerlink" title="3 Xcode"></a>3 Xcode</h2><p><strong>Cmd + T</strong></p>
+<h2 id="3-Protocol-in-class"><a href="#3-Protocol-in-class" class="headerlink" title="3 Protocol in class"></a>3 Protocol in class</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">aDelegate</span>: <span class="title">class</span> </span>&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</div><div class="line">	<span class="keyword">weak</span> <span class="keyword">var</span> delegate: aDelegate?</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>In Swift, protocol will not only be class’s but also structure and enums’  </p>
+<p>So if we want to use a <code>weak</code> statement(class’s statement),<br>we should add <code>: class</code> to designate it as a class’s protocol.  </p>
+<p>Otherwise we should add @objc between protocol as <code>@objc protocol</code></p>
+</blockquote>
+<h2 id="4-Xcode"><a href="#4-Xcode" class="headerlink" title="4 Xcode"></a>4 Xcode</h2><p><strong>Cmd + T</strong></p>
 <blockquote>
 <p>Add a new tab in Xcode</p>
 </blockquote>
-<h2 id="4-CocoaPods"><a href="#4-CocoaPods" class="headerlink" title="4 CocoaPods"></a>4 CocoaPods</h2><blockquote>
+<h2 id="5-CocoaPods"><a href="#5-CocoaPods" class="headerlink" title="5 CocoaPods"></a>5 CocoaPods</h2><blockquote>
 <p>Alamofire<br>Kingfisher<br>SwiftyJSON<br>SVProgressHUD</p>
 </blockquote>
 <p>Refference: <a href="https://www.raywenderlich.com/177482/top-10-ios-developer-libraries" target="_blank" rel="external">Top 10 Libraries for iOS Developers</a></p>
@@ -1892,7 +1920,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1903,7 +1931,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
