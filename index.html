@@ -287,6 +287,167 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://namazu923.github.io/2018/01/14/Weekly-Summary-W2-1-8-1-14/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鯰">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鯰">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/14/Weekly-Summary-W2-1-8-1-14/" itemprop="url">Weekly Summary W2 (1.8-1.14)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-14T20:22:59+08:00">
+                2018-01-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/14/Weekly-Summary-W2-1-8-1-14/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/01/14/Weekly-Summary-W2-1-8-1-14/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h1><h2 id="1-WKWebView-amp-JS"><a href="#1-WKWebView-amp-JS" class="headerlink" title="1 WKWebView &amp; JS"></a>1 WKWebView &amp; JS</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> dict = [<span class="type">String</span>: <span class="type">Any</span>]()</div><div class="line">dict[<span class="string">"msg"</span>]  = <span class="string">"This is a message from Native"</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> dataJson = <span class="keyword">try</span> <span class="type">JSONSerialization</span>.data(withJSONObject: dict, options: .<span class="type">WritingOptions</span>())</div><div class="line"><span class="keyword">let</span> strJson  = <span class="type">String</span>(data: dataJson, encoding: <span class="type">String</span>.<span class="type">Encoding</span>.<span class="type">UTF8</span>)</div><div class="line"></div><div class="line">wkWebView.evaluateJavaScript(<span class="string">"webFunction('<span class="subst">\(strJson)</span>')"</span>)</div></pre></td></tr></table></figure>
+<h3 id="1-1-WritingOption-amp-ReadingOption"><a href="#1-1-WritingOption-amp-ReadingOption" class="headerlink" title="1.1 WritingOption &amp; ReadingOption"></a>1.1 WritingOption &amp; ReadingOption</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">JSONSerialization</span>.<span class="title">ReadingOptions</span></span></div></pre></td></tr></table></figure>
+<blockquote>
+<p> Options used when creating Foundation objects from JSON data.</p>
+</blockquote>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">JSONSerialization</span>.<span class="title">WritingOptions</span></span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>Options for writing JSON data</p>
+</blockquote>
+<h2 id="2-NotificationCenter"><a href="#2-NotificationCenter" class="headerlink" title="2 NotificationCenter"></a>2 NotificationCenter</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">addObserver</span><span class="params">(<span class="number">_</span> observer: Any, </span></span></div><div class="line"><span class="function"><span class="params">         selector aSelector: Selector, </span></span></div><div class="line"><span class="function"><span class="params">                 name aName: NSNotification.Name?, </span></span></div><div class="line"><span class="function"><span class="params">            object anObject: Any?)</span></span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>anObject</p>
+<blockquote>
+<p>The object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer.<br>If you pass nil, the notification center doesn’t use a notification’s sender to decide whether to deliver it to the observer.</p>
+</blockquote>
+</blockquote>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">post</span><span class="params">(name aName: NSNotification.Name, </span></span></div><div class="line"><span class="function"><span class="params">     object anObject: Any?, </span></span></div><div class="line"><span class="function"><span class="params">  userInfo aUserInfo: [AnyHashable : Any]? = <span class="literal">nil</span>)</span></span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>aUserInfo</p>
+<blockquote>
+<p>Optional information about the the notification.</p>
+</blockquote>
+</blockquote>
+<h2 id="3-Xcode"><a href="#3-Xcode" class="headerlink" title="3 Xcode"></a>3 Xcode</h2><p><strong>Cmd + T</strong></p>
+<blockquote>
+<p>Add a new tab in Xcode</p>
+</blockquote>
+<h2 id="4-CocoaPods"><a href="#4-CocoaPods" class="headerlink" title="4 CocoaPods"></a>4 CocoaPods</h2><blockquote>
+<p>Alamofire<br>Kingfisher<br>SwiftyJSON<br>SVProgressHUD</p>
+</blockquote>
+<p>Refference: <a href="https://www.raywenderlich.com/177482/top-10-ios-developer-libraries" target="_blank" rel="external">Top 10 Libraries for iOS Developers</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://namazu923.github.io/2017/11/26/SlideMenu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1666,168 +1827,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://namazu923.github.io/2017/10/21/Xcode-Tips/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="鯰">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="鯰">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/21/Xcode-Tips/" itemprop="url">Xcode Tips</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-21T13:15:33+08:00">
-                2017-10-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Xcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Xcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/10/21/Xcode-Tips/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/21/Xcode-Tips/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Short-Cut"><a href="#Short-Cut" class="headerlink" title="Short Cut"></a>Short Cut</h1><h2 id="Designate-a-class-in-the-assistant-editor"><a href="#Designate-a-class-in-the-assistant-editor" class="headerlink" title="Designate a class in the assistant editor"></a>Designate a class in the assistant editor</h2><ul>
-<li><strong>Shift + Cmd + O</strong> to input a class, then <strong>Option + Return</strong> to open the class in the assistant editor.  </li>
-<li>select a class in the navigator, then <strong>Option + Click</strong> to open the class in the assistant editor.</li>
-</ul>
-<h2 id="Designate-where-to-show-a-class-in-the-navigator"><a href="#Designate-where-to-show-a-class-in-the-navigator" class="headerlink" title="Designate where to show a class in the navigator"></a>Designate where to show a class in the navigator</h2><ul>
-<li>Use <strong>Option + Shift</strong> to click the file in the navigator and then select the area.
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/21/Xcode-Tips/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1882,7 +1881,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1943,7 +1942,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
