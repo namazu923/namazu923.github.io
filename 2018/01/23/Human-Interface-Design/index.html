@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="鯰">
 <meta property="og:description" content="Refference: Human Interface Guidelines App ArchitectureLoading Make it clear when loading is occurring Show content as soon as possible.  Modality Keep modal tasks simple, short, and narrowly focused.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-23T13:17:31.000Z">
+<meta property="og:updated_time" content="2018-01-29T15:06:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Human Interface Design">
 <meta name="twitter:description" content="Refference: Human Interface Guidelines App ArchitectureLoading Make it clear when loading is occurring Show content as soon as possible.  Modality Keep modal tasks simple, short, and narrowly focused.">
@@ -462,7 +462,180 @@
 </blockquote>
 </li>
 </ul>
-
+<h2 id="Data-Entry"><a href="#Data-Entry" class="headerlink" title="Data Entry"></a>Data Entry</h2><ul>
+<li><p><strong>Dynamically validate field values.</strong>  </p>
+<blockquote>
+<p> It’s frustrating when you have to go back and correct mistakes after filling out a lengthy form. Whenever possible, <code>check field values immediately after entry</code> so users can correct them right away.</p>
+</blockquote>
+</li>
+<li><p><strong>Show a hint in a text field to help communicate purpose.</strong></p>
+<blockquote>
+<p>A text field can contain placeholder text—such as “Email” or “Password”—when there’s no other text in the field. <code>Don’t use a separate label to describe a text field when placeholder text is sufficient</code>.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Feedback"><a href="#Feedback" class="headerlink" title="Feedback"></a>Feedback</h2><blockquote>
+<p>Feedback helps people know what an app is doing, discover what they can do next, and understand the results of actions.</p>
+</blockquote>
+<h2 id="File-Handling"><a href="#File-Handling" class="headerlink" title="File Handling"></a>File Handling</h2><ul>
+<li><p><strong>Don’t provide an option to create local-only files.</strong></p>
+<blockquote>
+<p>Users often expect all of their files to be available on all of their devices. Whenever possible, your app should support <code>cloud-based file storage through a service such as iCloud</code>.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Gestures"><a href="#Gestures" class="headerlink" title="Gestures"></a>Gestures</h2><ul>
+<li><strong>Don’t block systemwide screen-edge gestures.</strong></li>
+</ul>
+<h2 id="Undo-and-Redo"><a href="#Undo-and-Redo" class="headerlink" title="Undo and Redo"></a>Undo and Redo</h2><ul>
+<li><p><strong>If you use the shake gesture for undo and redo, don’t use it for other actions.</strong></p>
+<blockquote>
+<p>Although you can programmatically give multiple meanings to the shake gesture, you run the risk of confusing people and making your app unpredictable.</p>
+</blockquote>
+</li>
+<li><p><strong>Provide undo and redo buttons sparingly.</strong></p>
+<blockquote>
+<p><code>It’s confusing when apps provide multiple ways to perform the same task</code>. If your app truly warrants dedicated undo and redo buttons, use the standard system-provided icons and put them in an expected location, such as a navigation bar.</p>
+</blockquote>
+</li>
+<li><p><strong>Perform undo and redo operations in the current context only.</strong> </p>
+<blockquote>
+<p>Undo and redo should have a clear and immediate effect on the <code>current context</code>, not an earlier one.</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="System-Capabilities"><a href="#System-Capabilities" class="headerlink" title="System Capabilities"></a>System Capabilities</h1><h2 id="Notifications"><a href="#Notifications" class="headerlink" title="Notifications"></a>Notifications</h2><h3 id="Designing-a-Great-Notification-Experience"><a href="#Designing-a-Great-Notification-Experience" class="headerlink" title="Designing a Great Notification Experience"></a>Designing a Great Notification Experience</h3><ul>
+<li><p><strong>Don’t include your app name or icon.</strong></p>
+<blockquote>
+<p>The system automatically shows this information at the top of each notification.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Badging"><a href="#Badging" class="headerlink" title="Badging"></a>Badging</h3><ul>
+<li><p><strong>Use badging for notification purposes only.</strong></p>
+<blockquote>
+<p>Badges shouldn’t be used to display other types of numeric information, such as air quality, dates, stock prices, or weather.</p>
+</blockquote>
+</li>
+<li><p><strong>Keep badges up to date.</strong></p>
+<blockquote>
+<p><code>Update your app’s badge as soon as the corresponding information is read</code>. You don’t want people to think there’s new information available, only to find that they’ve already seen it. Note that <code>reducing a badge’s count to zero removes all related notifications from Notification Center</code>.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Ratings-and-Reviews"><a href="#Ratings-and-Reviews" class="headerlink" title="Ratings and Reviews"></a>Ratings and Reviews</h2><ul>
+<li><p><strong>Ask for a rating only after the user has demonstrated engagement with your app.</strong></p>
+<blockquote>
+<p>For example, prompt the user upon the completion of a game level or productivity task. Never ask for a rating on first launch or during onboarding. <code>Allow ample time to form an opinion</code>.</p>
+</blockquote>
+</li>
+<li><p><strong>Don’t interrupt the user, especially when they’re performing a time-sensitive or stressful task.</strong></p>
+</li>
+<li><p><strong>Don’t be a pest.</strong></p>
+<blockquote>
+<p>Repeated rating prompts can be irritating, and may even negatively influence the user’s opinion of your app. Allow <code>at least a week or two between rating requests</code> and <code>only prompt again after the user has demonstrated additional engagement with your app</code>.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="System-Rating-and-Review-Prompts"><a href="#System-Rating-and-Review-Prompts" class="headerlink" title="System Rating and Review Prompts"></a>System Rating and Review Prompts</h3><blockquote>
+<p>The system offers a consistent, nonintrusive way for apps to request ratings and reviews. To use this feature, you simply identify places in your app’s user experience where it makes sense to ask for feedback. If the user hasn’t already given feedback and a request hasn’t been made too recently, the system displays an in-app prompt that asks for a rating and an optional written review. The user can supply feedback or dismiss the prompt with a single tap. (In Settings, the user can also opt out of receiving these rating prompts for all apps they have installed.) <code>The system automatically limits the display of the prompt to three occurrences per app within a 365-day period</code>.</p>
+</blockquote>
+<ul>
+<li><strong>Prefer the system-provided prompt.</strong></li>
+<li><p><strong>Don’t use buttons or other controls to request feedback.</strong></p>
+<blockquote>
+<p>Since the system limits how often rating prompts occur, attempting to request feedback in response to a control may result in no rating prompt being displayed.</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="Visual-Design"><a href="#Visual-Design" class="headerlink" title="Visual Design"></a>Visual Design</h1><h2 id="Adaptivity-and-Layout"><a href="#Adaptivity-and-Layout" class="headerlink" title="Adaptivity and Layout"></a>Adaptivity and Layout</h2><h3 id="Layout-Considerations"><a href="#Layout-Considerations" class="headerlink" title="Layout Considerations"></a>Layout Considerations</h3><ul>
+<li><p><strong>Provide ample touch targets for interactive elements.</strong> </p>
+<blockquote>
+<p>Try to maintain a minimum tappable area of <code>44pt x 44pt</code> for all controls.</p>
+</blockquote>
+</li>
+<li><strong>Be prepared for text-size changes.</strong><blockquote>
+<p>People expect most apps to respond appropriately when they choose <code>a different text size in Settings</code>. To accommodate some text-size changes, you might need to adjust the layout. For more information about text usage in your app, see <a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/typography/" target="_blank" rel="external">Typography</a>.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Color"><a href="#Color" class="headerlink" title="Color"></a>Color</h2><p>R 255<br>G 59<br>B 48<br>Red</p>
+<p>R 255<br>G 149<br>B 0<br>Orange</p>
+<p>R 255<br>G 204<br>B 0<br>Yellow</p>
+<p>R 76<br>G 217<br>B 100<br>Green</p>
+<p>R 90<br>G 200<br>B 250<br>Teal Blue</p>
+<p>R 0<br>G 122<br>B 255<br>Blue</p>
+<p>R 88<br>G 86<br>B 214<br>Purple</p>
+<p>R 255<br>G 45<br>B 85<br>Pink</p>
+<ul>
+<li><strong>Consider choosing a key color to indicate interactivity throughout your app.</strong></li>
+<li><strong>Avoid using the same color for interactive and noninteractive elements.</strong></li>
+<li><p><strong>Use sufficient color contrast ratios.</strong></p>
+<blockquote>
+<p> Insufficient contrast in your app makes content hard to read for everyone. Icons and text might blend with the background, for example. An online <code>color contrast calculator</code> can help you accurately analyze the color contrast in your app, to ensure that it meets optimal standards. Strive for a <code>minimum contrast ratio of 4.5:1</code>, although <code>7:1 is preferred</code>because it meets more stringent accessibility standards.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2><ul>
+<li><p><strong>Avoid language that might sound patronizing.</strong></p>
+<blockquote>
+<p><code>Avoid we, our, me, and my</code> (for example “our tutorial” and “my workouts”). They’re sometimes interpreted as insulting or patronizing.</p>
+</blockquote>
+</li>
+<li><p><strong>Strive for an informal, friendly tone.</strong></p>
+<blockquote>
+<p>An informal, approachable style echoes the way you speak with people over lunch. Use <code>contractions occasionally</code>, and <code>you and your</code> to address the user directly.</p>
+</blockquote>
+</li>
+<li><p><strong>Refer to dates accurately.</strong></p>
+<blockquote>
+<p> It’s appropriate to use friendly terms like today and tomorrow, but these terms can be confusing or inaccurate if you don’t account for the current locale. Consider an event that starts just before midnight. In one time zone, the event may start today. In another time zone, the same event may have started yesterday. Generally, dates should reflect the time zone of the person viewing the event. However, in some cases, such as in a flight tracking app, it may be clearer to explicitly show the start date and time zone where the flight originates.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Typography"><a href="#Typography" class="headerlink" title="Typography"></a>Typography</h2><ul>
+<li><strong>Use built-in text styles whenever possible.</strong><blockquote>
+<p><a href="https://developer.apple.com/documentation/uikit/uifonttextstyle" target="_blank" rel="external">UIFontTextStyle</a></p>
+<h3 id="Dynamic-Type-Sizes"><a href="#Dynamic-Type-Sizes" class="headerlink" title="Dynamic Type Sizes"></a>Dynamic Type Sizes</h3></blockquote>
+</li>
+</ul>
+<h1 id="Icons-and-Images"><a href="#Icons-and-Images" class="headerlink" title="Icons and Images"></a>Icons and Images</h1><h2 id="Image-Size-and-Resolution"><a href="#Image-Size-and-Resolution" class="headerlink" title="Image Size and Resolution"></a>Image Size and Resolution</h2><h3 id="Designing-High-Resolution-Artwork"><a href="#Designing-High-Resolution-Artwork" class="headerlink" title="Designing High-Resolution Artwork"></a>Designing High-Resolution Artwork</h3><ul>
+<li><p><strong>Produce artwork in the appropriate format.</strong></p>
+<blockquote>
+<p>In general, use de-interlaced <code>PNG files for bitmap/raster artwork</code>. PNG supports transparency and, because it’s lossless, compression artifacts don’t blur important details or alter colors. It’s a good choice for intricate artwork that requires effects like shading, textures, and highlights. <code>Use JPEG for photos</code>. Its compression algorithm usually produces smaller sizes than lossless formats and artifacts are harder to discern in photos. <code>Photo-realistic app icons, however, look best as PNGs</code>. <code>Use PDF for glyphs and other flat, vector artwork that requires high-resolution scaling</code>.    </p>
+</blockquote>
+</li>
+<li><strong>Provide alternative text labels for images and icons</strong><blockquote>
+<p> Alternative text labels aren’t visible onscreen, but they let <code>VoiceOver</code> audibly describe what’s onscreen, making navigation easier for people with visual impairments.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="App-Icon"><a href="#App-Icon" class="headerlink" title="App Icon"></a>App Icon</h2><ul>
+<li><p><strong>Use words only when they’re essential or part of a logo.</strong></p>
+<blockquote>
+<p>An app’s name appears below its icon on the Home screen. Don’t include nonessential words that repeat the name or tell people what to do with your app, like “Watch” or “Play.” If your design includes any text, emphasize words that relate to the actual content your app offers</p>
+</blockquote>
+</li>
+<li><p><strong>Don’t place your app icon throughout the interface.</strong></p>
+<blockquote>
+<p> It can be confusing to see an icon used for different purposes throughout an app. Instead, consider incorporating your icon’s color scheme.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="App-Icon-Sizes"><a href="#App-Icon-Sizes" class="headerlink" title="App Icon Sizes"></a>App Icon Sizes</h3><ul>
+<li>Mimic your small icon with your App Store icon.</li>
+</ul>
+<h3 id="Spotlight-Settings-and-Notification-Icons"><a href="#Spotlight-Settings-and-Notification-Icons" class="headerlink" title="Spotlight, Settings, and Notification Icons"></a>Spotlight, Settings, and Notification Icons</h3><blockquote>
+<p>Every app should also provide a small icon that iOS can display when the app name matches a term in a Spotlight search. Additionally, apps with settings should provide a small icon to display in the built-in Settings app, and apps that support notifications should provide a small icon to display in notifications. All icons should clearly identify your app—ideally, they should match your app icon. <code>If you don’t provide these icons, iOS might shrink your main app icon for display in these locations</code>.</p>
+</blockquote>
+<ul>
+<li><p><strong>Don’t add an overlay or border to your Settings icon.</strong></p>
+<blockquote>
+<p> iOS automatically adds a 1-pixel stroke to all icons so that they look good on the white background of Settings.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="User-Selectable-App-Icons"><a href="#User-Selectable-App-Icons" class="headerlink" title="User-Selectable App Icons"></a>User-Selectable App Icons</h3><h2 id="Custom-Icons"><a href="#Custom-Icons" class="headerlink" title="Custom Icons"></a>Custom Icons</h2>
       
     </div>
     
@@ -648,7 +821,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#App-Architecture"><span class="nav-number">1.</span> <span class="nav-text">App Architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Loading"><span class="nav-number">1.1.</span> <span class="nav-text">Loading</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modality"><span class="nav-number">1.2.</span> <span class="nav-text">Modality</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Onboarding"><span class="nav-number">1.3.</span> <span class="nav-text">Onboarding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Settings"><span class="nav-number">1.4.</span> <span class="nav-text">Settings</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#User-Interaction"><span class="nav-number">2.</span> <span class="nav-text">User Interaction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3D-Touch"><span class="nav-number">2.1.</span> <span class="nav-text">3D Touch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Authentication"><span class="nav-number">2.2.</span> <span class="nav-text">Authentication</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Face-ID-and-Touch-ID"><span class="nav-number">2.2.1.</span> <span class="nav-text">Face ID and Touch ID</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#App-Architecture"><span class="nav-number">1.</span> <span class="nav-text">App Architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Loading"><span class="nav-number">1.1.</span> <span class="nav-text">Loading</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modality"><span class="nav-number">1.2.</span> <span class="nav-text">Modality</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Onboarding"><span class="nav-number">1.3.</span> <span class="nav-text">Onboarding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Settings"><span class="nav-number">1.4.</span> <span class="nav-text">Settings</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#User-Interaction"><span class="nav-number">2.</span> <span class="nav-text">User Interaction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3D-Touch"><span class="nav-number">2.1.</span> <span class="nav-text">3D Touch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Authentication"><span class="nav-number">2.2.</span> <span class="nav-text">Authentication</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Face-ID-and-Touch-ID"><span class="nav-number">2.2.1.</span> <span class="nav-text">Face ID and Touch ID</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Entry"><span class="nav-number">2.3.</span> <span class="nav-text">Data Entry</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Feedback"><span class="nav-number">2.4.</span> <span class="nav-text">Feedback</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-Handling"><span class="nav-number">2.5.</span> <span class="nav-text">File Handling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gestures"><span class="nav-number">2.6.</span> <span class="nav-text">Gestures</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Undo-and-Redo"><span class="nav-number">2.7.</span> <span class="nav-text">Undo and Redo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#System-Capabilities"><span class="nav-number">3.</span> <span class="nav-text">System Capabilities</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Notifications"><span class="nav-number">3.1.</span> <span class="nav-text">Notifications</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Designing-a-Great-Notification-Experience"><span class="nav-number">3.1.1.</span> <span class="nav-text">Designing a Great Notification Experience</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Badging"><span class="nav-number">3.1.2.</span> <span class="nav-text">Badging</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ratings-and-Reviews"><span class="nav-number">3.2.</span> <span class="nav-text">Ratings and Reviews</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#System-Rating-and-Review-Prompts"><span class="nav-number">3.2.1.</span> <span class="nav-text">System Rating and Review Prompts</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Visual-Design"><span class="nav-number">4.</span> <span class="nav-text">Visual Design</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Adaptivity-and-Layout"><span class="nav-number">4.1.</span> <span class="nav-text">Adaptivity and Layout</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Layout-Considerations"><span class="nav-number">4.1.1.</span> <span class="nav-text">Layout Considerations</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Color"><span class="nav-number">4.2.</span> <span class="nav-text">Color</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminology"><span class="nav-number">4.3.</span> <span class="nav-text">Terminology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typography"><span class="nav-number">4.4.</span> <span class="nav-text">Typography</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dynamic-Type-Sizes"><span class="nav-number">4.4.1.</span> <span class="nav-text">Dynamic Type Sizes</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Icons-and-Images"><span class="nav-number">5.</span> <span class="nav-text">Icons and Images</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-Size-and-Resolution"><span class="nav-number">5.1.</span> <span class="nav-text">Image Size and Resolution</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Designing-High-Resolution-Artwork"><span class="nav-number">5.1.1.</span> <span class="nav-text">Designing High-Resolution Artwork</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#App-Icon"><span class="nav-number">5.2.</span> <span class="nav-text">App Icon</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#App-Icon-Sizes"><span class="nav-number">5.2.1.</span> <span class="nav-text">App Icon Sizes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spotlight-Settings-and-Notification-Icons"><span class="nav-number">5.2.2.</span> <span class="nav-text">Spotlight, Settings, and Notification Icons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#User-Selectable-App-Icons"><span class="nav-number">5.2.3.</span> <span class="nav-text">User-Selectable App Icons</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Custom-Icons"><span class="nav-number">5.3.</span> <span class="nav-text">Custom Icons</span></a></li></ol></li></ol></div>
             
 
           </div>
