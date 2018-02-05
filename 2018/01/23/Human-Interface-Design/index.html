@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="鯰">
 <meta property="og:description" content="Refference: Human Interface Guidelines App ArchitectureLoading Make it clear when loading is occurring Show content as soon as possible.  Modality Keep modal tasks simple, short, and narrowly focused.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-29T15:06:26.000Z">
+<meta property="og:updated_time" content="2018-02-05T15:44:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Human Interface Design">
 <meta name="twitter:description" content="Refference: Human Interface Guidelines App ArchitectureLoading Make it clear when loading is occurring Show content as soon as possible.  Modality Keep modal tasks simple, short, and narrowly focused.">
@@ -635,7 +635,463 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="User-Selectable-App-Icons"><a href="#User-Selectable-App-Icons" class="headerlink" title="User-Selectable App Icons"></a>User-Selectable App Icons</h3><h2 id="Custom-Icons"><a href="#Custom-Icons" class="headerlink" title="Custom Icons"></a>Custom Icons</h2>
+<h3 id="User-Selectable-App-Icons"><a href="#User-Selectable-App-Icons" class="headerlink" title="User-Selectable App Icons"></a>User-Selectable App Icons</h3><h2 id="Custom-Icons"><a href="#Custom-Icons" class="headerlink" title="Custom Icons"></a>Custom Icons</h2><ul>
+<li><p><strong>Design icons as glyphs.</strong></p>
+<blockquote>
+<p> A glyph, also known as a template image, is a monochromatic image with transparency, anti-aliasing, and no drop shadow that uses a mask to define its shape. <code>Glyphs automatically receive the appropriate appearance—including coloring, highlighting, and vibrancy—based on the context and user interactions.</code> A variety of standard interface elements support glyphs, including navigation bars, tab bars, toolbars, and Home screen quick actions.</p>
+</blockquote>
+</li>
+<li><p><strong>Prepare glyphs with a scale factor of @2x and save them as PDFs</strong></p>
+<blockquote>
+<p>Because PDF is a <code>vector format</code> that allows for high-resolution scaling, it’s typically sufficient to provide a single <code>@2x</code> version in your app and allow it to scale for other resolutions.</p>
+</blockquote>
+</li>
+<li><p><strong>Make sure icons are legible.</strong></p>
+<blockquote>
+<p>In general, <code>solid icons</code> tend to be clearer than outlined icons. If an icon must includes lines, coordinate the weight with other icons and your app’s typography.</p>
+</blockquote>
+</li>
+<li><p><strong>Use color to communicate selected and deselected states.</strong></p>
+<blockquote>
+<p>Avoid toggling between two different icon designs, like a solid version and an outlined version.</p>
+</blockquote>
+</li>
+<li><p><strong>Avoid including text in an icon.</strong></p>
+<blockquote>
+<p>If you need text, display a label beneath the icon and adjust its placement accordingly.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Custom-Icon-Sizes"><a href="#Custom-Icon-Sizes" class="headerlink" title="Custom Icon Sizes"></a>Custom Icon Sizes</h3><ul>
+<li><p><strong>Navigation Bar and Toolbar Icon Size</strong></p>
+<blockquote>
+<p>Target sizes    Maximum sizes</p>
+<p>72px × 72px (24pt × 24pt @3x)    84px × 84px (28pt × 28pt @3x)</p>
+<p>48px × 48px (24pt × 24pt @2x)    56px × 56px (28pt × 28pt @2x)</p>
+</blockquote>
+</li>
+<li><p><strong>Tab Bar Icon Size</strong></p>
+</li>
+</ul>
+<h2 id="Launch-Screen"><a href="#Launch-Screen" class="headerlink" title="Launch Screen"></a>Launch Screen</h2><ul>
+<li><p><strong>Design a launch screen that’s nearly identical to the first screen of your app.</strong></p>
+<blockquote>
+<p> If you include elements that look different when the app finishes launching, people can experience an unpleasant flash between the launch screen and the first screen of the app.</p>
+</blockquote>
+</li>
+<li><p><strong>Avoid including text on your launch screen.</strong></p>
+<blockquote>
+<p>Because launch screens are static, any displayed <code>text won’t be localized</code>.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Static-Launch-Screen-Images"><a href="#Static-Launch-Screen-Images" class="headerlink" title="Static Launch Screen Images"></a>Static Launch Screen Images</h3><h2 id="System-Icons"><a href="#System-Icons" class="headerlink" title="System Icons"></a>System Icons</h2><h3 id="Navigation-Bar-and-Toolbar-Icons"><a href="#Navigation-Bar-and-Toolbar-Icons" class="headerlink" title="Navigation Bar and Toolbar Icons"></a>Navigation Bar and Toolbar Icons</h3><h3 id="Home-Screen-Quick-Action-Icons"><a href="#Home-Screen-Quick-Action-Icons" class="headerlink" title="Home Screen Quick Action Icons"></a>Home Screen Quick Action Icons</h3><h1 id="Bars"><a href="#Bars" class="headerlink" title="Bars"></a>Bars</h1><h2 id="Navigation-Bars"><a href="#Navigation-Bars" class="headerlink" title="Navigation Bars"></a>Navigation Bars</h2><h3 id="Navigation-Bar-Controls"><a href="#Navigation-Bar-Controls" class="headerlink" title="Navigation Bar Controls"></a>Navigation Bar Controls</h3><ul>
+<li><p><strong>Give text-titled buttons enough room.</strong></p>
+<blockquote>
+<p> If your navigation bar includes multiple text buttons, the text of those buttons may appear to run together, making the buttons indistinguishable. Add separation by inserting a fixed space item between the buttons. For developer guidance, see the <code>UIBarButtonSystemItemFixedSpace</code> constant value in UIBarButtonItem.</p>
+</blockquote>
+</li>
+<li><p><strong>Consider using a segmented control in a navigation bar to flatten your app’s information hierarchy. </strong></p>
+<blockquote>
+<p> If you use a segmented control in a navigation bar, do so only at the top level of your hierarchy and be sure to choose accurate back-button titles at lower levels. For additional guidance, see Segmented Controls.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Search-Bars"><a href="#Search-Bars" class="headerlink" title="Search Bars"></a>Search Bars</h2><ul>
+<li><p><strong>Enable the Clear button.</strong></p>
+<blockquote>
+<p>Most search bars include a Clear button that erases the contents of the field.</p>
+</blockquote>
+</li>
+<li><p><strong>Enable the Cancel button when appropriate.</strong></p>
+<blockquote>
+<p>Most dedicated search bars include a Cancel button that immediately terminates the search.</p>
+</blockquote>
+</li>
+<li><p><strong>If necessary, provide hints and context in a search bar</strong></p>
+<blockquote>
+<p>A search bar’s field can contain placeholder text—like “Search Clothing, Shoes and Accessories” or simply “Search”—as a reminder of the context being searched. A succinct, one-line <code>prompt</code> with appropriate punctuation can also appear directly above a search bar to provide guidance. Stocks uses a prompt to let people know they can enter a company name or stock symbol.</p>
+</blockquote>
+</li>
+<li><p><strong>Consider providing helpful shortcuts and other content below a search bar.</strong></p>
+<blockquote>
+<p>Use the area under a search bar to help people get to content faster. Safari, for example, shows your bookmarks as soon as you tap the search field. Select one to go right to it without entering any search terms. Stocks shows a list of results as you type into the search field. Tap one at any time without typing any more characters.</p>
+</blockquote>
+</li>
+</ul>
+<p>###Scope Bars</p>
+<h2 id="Status-Bars"><a href="#Status-Bars" class="headerlink" title="Status Bars"></a>Status Bars</h2><ul>
+<li><strong>Consider temporarily hiding the status bar when displaying full-screen media.</strong></li>
+<li><strong>Avoid permanently hiding the status bar. </strong><blockquote>
+<p>Without a status bar, people must leave your app to check the time or see if they have a Wi-Fi connection. Let people redisplay a hidden status bar by using a simple, discoverable gesture. When browsing full-screen photos in the Photos app, a single tap shows the status bar again.</p>
+</blockquote>
+</li>
+<li><strong>Use the status bar to denote network activity.</strong><blockquote>
+<p>When your app uses the network, especially for lengthy operations, show the network activity status bar indicator so people know activity is occurring. See <code>Network Activity Indicators</code>.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Tab-Bars"><a href="#Tab-Bars" class="headerlink" title="Tab Bars"></a>Tab Bars</h2><ul>
+<li><p><strong>Don’t remove or disable a tab when its function is unavailable.</strong></p>
+<blockquote>
+<p> If tabs are available in some cases but not in others, your app’s interface becomes unstable and unpredictable. Ensure that <code>all tabs are always enabled, and explain why a tab’s content is unavailable</code>. For example, if there are no songs on an iOS device, the My Music tab in the Music app explains how to download songs. </p>
+</blockquote>
+</li>
+<li><p><strong>Use badging to communicate unobtrusively.</strong></p>
+<blockquote>
+<p>You can display a badge—a red oval containing white text and either a number or an exclamation point—on a tab to indicate that new information is associated with that view or mode.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Toolbars"><a href="#Toolbars" class="headerlink" title="Toolbars"></a>Toolbars</h2><ul>
+<li><p><strong>Consider whether icons or text-titled buttons are right for your app.</strong></p>
+<blockquote>
+<p><code>Icons work well</code> when you need <code>more than three</code> toolbar buttons. When you have <code>three buttons or fewer</code>, <code>text can sometimes be clearer</code>. In Calendar, for example, text is used because icons would be confusing. The use of text also allows the Inbox button to show a count of calendar and event invitations.</p>
+</blockquote>
+</li>
+<li><p><strong>Give text-titled buttons enough room.</strong></p>
+<blockquote>
+<p>If your toolbar includes multiple buttons, the text of those buttons may appear to run together, making the buttons indistinguishable. Add separation by inserting fixed space between the buttons. For developer guidance, see the <code>UIBarButtonSystemItemFixedSpace</code> constant value in UIBarButtonItem.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="TIP"><a href="#TIP" class="headerlink" title="TIP"></a>TIP</h3><blockquote>
+<p>It’s important to understand the difference between a toolbar and a tab bar, because both types of bars appear at the bottom of an app screen. A <code>toolbar</code> contains buttons for performing actions related to the <code>current context</code>, such as creating an item, deleting an item, adding an annotation, or taking a photo. A <code>tab bar</code> lets the user switch quickly between <code>different sections of an app</code>, for example, the Alarm, Stopwatch, and Timer tabs in the Clock app. See Tab Bars. Toolbars and tab bars never appear together in the same view.</p>
+</blockquote>
+<h1 id="Views"><a href="#Views" class="headerlink" title="Views"></a>Views</h1><h2 id="Action-Sheets"><a href="#Action-Sheets" class="headerlink" title="Action Sheets"></a>Action Sheets</h2><ul>
+<li><p><strong>Provide a Cancel button if it adds clarity.</strong></p>
+<blockquote>
+<p>A Cancel button instills confidence when the user is abandoning a task. <code>Cancel buttons should always be included in action sheets at the bottom of the screen</code>.</p>
+</blockquote>
+</li>
+<li><p><strong>Make destructive choices prominent.</strong></p>
+<blockquote>
+<p>Use <code>red</code> for buttons that perform <code>destructive or dangerous</code> actions, and display these buttons at the <code>top</code> of an action sheet.</p>
+</blockquote>
+</li>
+<li><p><strong>Avoid enabling scrolling in an action sheet.</strong></p>
+<blockquote>
+<p>If an action sheet has too many options, people must scroll to see all of the choices. Scrolling requires extra time to make a choice and is hard to do without inadvertently tapping a button.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Activity-Views"><a href="#Activity-Views" class="headerlink" title="Activity Views"></a>Activity Views</h2><ul>
+<li><p><strong>Design simple template images to represent your custom activities.</strong></p>
+<blockquote>
+<p>A template image uses a mask to create an icon. Use <code>black and white with appropriate transparency and antialiasing, and don’t include a drop shadow</code>. Template images should be centered in an area measuring about <code>70px × 70px</code>.</p>
+</blockquote>
+</li>
+<li><p><strong>Make sure activities are appropriate for the current context.</strong></p>
+<blockquote>
+<p>Although system-provided tasks can’t be reordered in an activity, they can be <code>excluded</code> if they aren’t applicable to your app. For example, to prevent people from printing images, you can exclude the Print activity. You can also identify which custom tasks to show at any given time.</p>
+</blockquote>
+</li>
+<li><p><strong>Use the Action button to display an activity view.</strong></p>
+<blockquote>
+<p>People are accustomed to accessing system-provided activities when they tap the Action button. Avoid confusing people by providing an alternative way to do the same thing.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Alerts"><a href="#Alerts" class="headerlink" title="Alerts"></a>Alerts</h2><ul>
+<li><p><strong>Minimize alerts.</strong></p>
+<blockquote>
+<p>Alerts disrupt the user experience and should only be used in important situations like confirming purchases and destructive actions (such as deletions), or notifying people about problems. The infrequency of alerts helps ensure that people take them seriously. Ensure that <code>each alert offers critical information and useful choices</code>.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Alert-Titles-and-Messages"><a href="#Alert-Titles-and-Messages" class="headerlink" title="Alert Titles and Messages"></a>Alert Titles and Messages</h3><ul>
+<li><p><strong>Avoid sounding accusatory, judgmental, or insulting.</strong></p>
+<blockquote>
+<p>People know that alerts notify them about problems and dangerous situations. As long as you use a friendly tone, it’s <code>better to be negative and direct than positive and oblique</code>. <code>Avoid</code> pronouns such as <code>you, your, me, and my</code>, which are sometimes interpreted as insulting or patronizing.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Alert-Buttons"><a href="#Alert-Buttons" class="headerlink" title="Alert Buttons"></a>Alert Buttons</h3><ul>
+<li><p><strong>Generally, use two-button alerts.</strong></p>
+<blockquote>
+<p>Two-button alerts provide an easy choice between <code>two alternatives</code>. Single-button alerts inform, but give no control over the situation. Alerts with three or more buttons create complexity and can require scrolling, which is a bad user experience. <code>If you find that you need more than two choices, consider using an action sheet instead</code>. See Action Sheets.</p>
+</blockquote>
+</li>
+<li><p><strong>Give alert buttons succinct, logical titles.</strong></p>
+<blockquote>
+<p>The best button titles consist of one or two words that describe the result of selecting the button. As with all button titles, use <code>title-style capitalization and no ending punctuation</code>. To the extent possible, use <code>verbs and verb phrases</code> that relate directly to the alert title and message—for example, View All, Reply, or Ignore. Use <code>OK</code> for simple acceptance. <code>Avoid using Yes and No</code>.</p>
+</blockquote>
+</li>
+<li><p><strong>Place buttons where people expect them.</strong></p>
+<blockquote>
+<p>In general, buttons people are <code>most likely to tap should be on the right</code>. <code>Cancel buttons should always be on the left</code>.</p>
+</blockquote>
+</li>
+<li><p><strong>Label cancellation buttons appropriately.</strong></p>
+<blockquote>
+<p>A button that cancels an alert’s action should always be labeled <code>Cancel</code>.</p>
+</blockquote>
+</li>
+<li><p><strong>Identify destructive buttons.</strong></p>
+<blockquote>
+<p>If an alert button results in a destructive action, such as deleting content, set the button’s style to Destructive so that it gets appropriate formatting by the system. For developer guidance, see the UIAlertActionStyleDestructive constant of UIAlertAction. Additionally, provide a Cancel button so people can safely opt out of the destructive action. <code>Make the Cancel button bold by marking it as the default button</code>.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h2><ul>
+<li><p><strong>Consider using a table instead of a collection for text.</strong></p>
+<blockquote>
+<p>It’s generally simpler and more efficient to view and digest textual information when it’s displayed in a scrollable list.</p>
+</blockquote>
+</li>
+<li><p><strong>Image Views</strong></p>
+<blockquote>
+<p>NOTE</p>
+<p>An image that’s been configured as a template image discards its color and adopts any tint that’s been applied to the enclosing image view. See Custom Icons. For developer guidance, see <code>UIImageRenderingModeAlwaysTemplate</code> in UIImage.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Pages"><a href="#Pages" class="headerlink" title="Pages"></a>Pages</h2><ul>
+<li><strong>If appropriate, implement a way to navigate nonlinearly.</strong></li>
+</ul>
+<h2 id="Scroll-Views"><a href="#Scroll-Views" class="headerlink" title="Scroll Views"></a>Scroll Views</h2><ul>
+<li><p><strong>Consider showing a page control element when a scroll view is in paging mode.</strong></p>
+<blockquote>
+<p>A page control shows how many pages, screens, or other chunks of content are available and indicates which one is currently visible. <code>If you show a page control with a scroll view, disable the scrolling indicator on the same axis to avoid confusion</code>. For additional guidance, see Page Controls.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h2><ul>
+<li><p><strong>Begin showing table content quickly.</strong></p>
+<blockquote>
+<p>Don’t wait for extensive table content to load before showing something. Fill onscreen rows with textual data immediately and show more complex data—such as images—as it becomes available. This technique <code>gives people useful information right away</code> and increases the perceived responsiveness of your app. In some cases, showing stale, older data may make sense until fresh, new data arrives.</p>
+</blockquote>
+</li>
+<li><p><strong>Communicate progress as content loads.</strong></p>
+<blockquote>
+<p>If a table’s data takes time to load, show a progress bar or spinning activity indicator to reassure people that your app is still running.</p>
+</blockquote>
+</li>
+<li><p><strong>Keep content fresh.</strong></p>
+<blockquote>
+<p>Consider updating your table’s content regularly to reflect newer data. Just don’t change the scrolling position. Instead, add the content to the beginning or end of the table, and let people scroll to it when they’re ready. Some apps display an indicator when new data has been added, and provide a control for jumping right to it. It’s also a good idea to include a refresh control, so people can manually perform an update at any time. See Refresh Content Controls.</p>
+</blockquote>
+</li>
+<li><p><strong>Avoid combining an index with table rows containing right-aligned elements.</strong></p>
+<blockquote>
+<p>An index is controlled by performing large swiping gestures. If other interactive elements reside nearby, such as disclosure indicators, it may be difficult to discern the user’s intent when a gesture occurs and the wrong element may be activated.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Table-Rows"><a href="#Table-Rows" class="headerlink" title="Table Rows"></a>Table Rows</h3><ul>
+<li><p><strong>Provide feedback when a selection is made.</strong></p>
+<blockquote>
+<p>People expect a row to highlight briefly when its content is tapped. Then, people expect a new view to appear or something to change, such as a checkmark appearing, that indicates a selection has been made.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Text-Views"><a href="#Text-Views" class="headerlink" title="Text Views"></a>Text Views</h2><ul>
+<li><p><strong>Show the appropriate keyboard type.</strong></p>
+<blockquote>
+<p>iOS provides several different keyboard types, each designed to facilitate a different type of input. To streamline data entry, the keyboard displayed during the editing of a text view should be appropriate for the type of content in the field. For a complete list of available keyboard types, see the UIKeyboardType constant of UITextInputTraits.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Web-Views"><a href="#Web-Views" class="headerlink" title="Web Views"></a>Web Views</h2><ul>
+<li><p><strong>Enable forward and back navigation when appropriate.</strong></p>
+<blockquote>
+<p>Web views support forward and back navigation, but this behavior is disabled by default. If people will use your web view to visit multiple pages, enable forward and back navigation, and provide corresponding controls to initiate these features.</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="Controls"><a href="#Controls" class="headerlink" title="Controls"></a>Controls</h1><h2 id="Buttons"><a href="#Buttons" class="headerlink" title="Buttons"></a>Buttons</h2><h3 id="System-Buttons"><a href="#System-Buttons" class="headerlink" title="System Buttons"></a>System Buttons</h3><ul>
+<li><p><strong>Use verbs in titles.</strong></p>
+<blockquote>
+<p>An action-specific title shows that a button is interactive and says what happens when you tap it.</p>
+</blockquote>
+</li>
+<li><p><strong>Use title-case for titles.</strong></p>
+<blockquote>
+<p>Capitalize every word except articles, coordinating conjunctions, and prepositions of four or fewer letters.</p>
+</blockquote>
+</li>
+<li><p><strong>Keep titles short.</strong></p>
+<blockquote>
+<p>Overly long text can crowd your interface and may get truncated on smaller screens.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Detail-Disclosure-Buttons"><a href="#Detail-Disclosure-Buttons" class="headerlink" title="Detail Disclosure Buttons"></a>Detail Disclosure Buttons</h3><ul>
+<li><p><strong>Use Detail Disclosure buttons appropriately in tables.</strong></p>
+<blockquote>
+<p>When a Detail Disclosure button is present in a table row, tapping the button shows additional information. Tapping elsewhere selects the row or results in app-defined behavior. If you want people to tap the entire row to see additional detail, don’t use a Detail Disclosure button. Instead, use a detail disclosure accessory control, which appears as a chevron. See UITableViewCellAccessoryType in UITableViewCell.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Edit-Menus"><a href="#Edit-Menus" class="headerlink" title="Edit Menus"></a>Edit Menus</h2><ul>
+<li><p><strong>Show appropriate commands for the current context.</strong></p>
+<blockquote>
+<p>By default, the options include Cut, Copy, Paste, Select, Select All, and Delete commands, any of which can optionally be disabled. If nothing is selected, the menu shouldn’t show options that require a selection, such as Copy or Cut. Similarly, the menu shouldn’t have a Select option if something is already selected.</p>
+</blockquote>
+</li>
+<li><p><strong>Adjust placement of edit options, if necessary.</strong></p>
+<blockquote>
+<p>By default, the menu is positioned above or below the insertion point or selection, depending on available space, and includes a pointer to the related content. Although you can’t change the shape of the menu, its position is configurable—you can prevent it from covering important content or parts of your interface.</p>
+</blockquote>
+</li>
+<li><p><strong>Don’t implement other controls with the same functionality as the edit menu.</strong></p>
+<blockquote>
+<p>Providing multiple ways to initiate an operation results in an inconsistent user experience and leads to confusion. <code>If your app lets people use the menu to copy content, for example, don’t implement a copy button too</code>.</p>
+</blockquote>
+</li>
+<li><p><strong>Don’t add edit options to a button.</strong></p>
+<blockquote>
+<p>If you do this, people attempting to reveal the options will end up activating the button instead.</p>
+</blockquote>
+</li>
+<li><p><strong>Make edit operations undoable.</strong></p>
+<blockquote>
+<p>The menu doesn’t require confirmation before its actions are performed. Because someone could change their mind after performing an operation, <code>always implement undo and redo support</code>.</p>
+</blockquote>
+</li>
+<li><p><strong>Expand edit options with useful custom commands.</strong></p>
+<blockquote>
+<p>You can add value by providing additional app-specific commands. Like the standard commands, any custom commands should operate on selected text or objects.</p>
+</blockquote>
+</li>
+<li><p><strong>Show custom commands after the system-provided ones.</strong></p>
+<blockquote>
+<p>Don’t intersperse custom commands with the system-provided ones, which are well known and frequently used.</p>
+</blockquote>
+</li>
+<li><p><strong>Minimize the number of custom commands.</strong></p>
+<blockquote>
+<p>Don’t overwhelm people with too many choices.</p>
+</blockquote>
+</li>
+<li><p><strong>Keep custom command names short.</strong></p>
+<blockquote>
+<p>Command names should be verbs or short verb phrases that succinctly describe the action to be performed. Use title-style capitalization—capitalize every word except articles, coordinating conjunctions, and prepositions of four or fewer letters.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Page-Controls"><a href="#Page-Controls" class="headerlink" title="Page Controls"></a>Page Controls</h2><ul>
+<li><p><strong>Don’t display too many pages.</strong></p>
+<blockquote>
+<p>More than about 10 dots are hard to count at a glance, and more than about 20 open pages are time-consuming to visit in sequence. If your app needs to display more than 20 pages as peers, consider using a different arrangement—such as a <code>grid</code>—that enables nonsequential navigation.</p>
+</blockquote>
+</li>
+<li><p><strong>Center page controls at the bottom of the screen.</strong></p>
+<blockquote>
+<p>A page control should always be centered and positioned <code>between the bottom of the content and the bottom of the screen</code>. This keeps it visible, without blocking content.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Pickers"><a href="#Pickers" class="headerlink" title="Pickers"></a>Pickers</h2><ul>
+<li><p><strong>Use predictable and logically ordered values.</strong></p>
+<blockquote>
+<p>Many values in a picker may be hidden when the scrollable lists are stationary. It’s best when people can predict what these values are, such as with a list of alphabetized countries, so they can move through the lists quickly.</p>
+</blockquote>
+</li>
+<li><p><strong>Use a table instead of a picker for large value lists.</strong></p>
+<blockquote>
+<p> Long lists can be tedious to navigate in a picker. A table has adjustable height and can include an index, making scrolling much faster.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Progress-Indicators"><a href="#Progress-Indicators" class="headerlink" title="Progress Indicators"></a>Progress Indicators</h2><p>###Activity Indicators**</p>
+<ul>
+<li><p><strong>Favor progress bars over activity indicators.</strong></p>
+<blockquote>
+<p>If activity is <code>quantifiable</code>, use a progress bar instead of an activity indicator so people can better gauge what’s happening and how long it will take.</p>
+</blockquote>
+</li>
+<li><p><strong>If it’s helpful, provide useful information while waiting for a task to complete.</strong></p>
+<blockquote>
+<p>Include a label above an activity indicator to give extra context. Avoid vague terms like loading or authenticating because they don’t usually add any value.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Progress-Bars"><a href="#Progress-Bars" class="headerlink" title="Progress Bars"></a>Progress Bars</h3><ul>
+<li><p><strong>Always report progress accurately.</strong></p>
+<blockquote>
+<p>Don’t display inaccurate progress information just to make your app appear busy. Only use progress bars for tasks that are quantifiable. Otherwise, use an activity indicator.</p>
+</blockquote>
+</li>
+<li><p><strong>Hide the unfilled portion of track in navigation bars and toolbars.</strong></p>
+<blockquote>
+<p>By default, a progress bar’s track includes both filled and unfilled portions. When used in a navigation bar or toolbar, such as to denote a page loading, a progress bar should be configured to hide the unfilled portion of the track.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Network-Activity-Indicators"><a href="#Network-Activity-Indicators" class="headerlink" title="Network Activity Indicators"></a>Network Activity Indicators</h3><ul>
+<li><p><strong>Show this indicator only for network operations lasting more than a few seconds.</strong></p>
+<blockquote>
+<p>Don’t display the indicator for quick network operations because it’s likely to disappear before anyone notices its presence or realizes what it’s meant to communicate.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Refresh-Content-Controls"><a href="#Refresh-Content-Controls" class="headerlink" title="Refresh Content Controls"></a>Refresh Content Controls</h2><ul>
+<li><p><strong>Perform automatic content updates.</strong></p>
+<blockquote>
+<p>Although people appreciate being able to trigger an immediate content refresh, they also expect automatic refreshes to occur periodically. Don’t make users responsible for initiating every update. Keep data fresh by updating it regularly.</p>
+</blockquote>
+</li>
+<li><p><strong>Supply a short title only if it adds value.</strong></p>
+<blockquote>
+<p>Optionally, a refresh control can include a title. In most cases, this is unnecessary, as the animation of the control indicates that content is loading. If you do include a title, don’t use it to explain how to perform a refresh. Instead, <code>provide information of value about the content being refreshed</code>. A refresh control in Podcasts, for example, uses a title to tell people when the last podcast update occurred.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Segmented-Controls"><a href="#Segmented-Controls" class="headerlink" title="Segmented Controls"></a>Segmented Controls</h2><ul>
+<li><p><strong>Limit the number of segments to improve usability.</strong></p>
+<blockquote>
+<p>Wider segments are easier to tap. On iPhone, a segmented control should have <code>five or fewer segments</code>. </p>
+</blockquote>
+</li>
+<li><p><strong>Try to keep segment content size consistent.</strong></p>
+<blockquote>
+<p>Because all segments have equal width, it doesn’t look great if content fills some segments but not others.</p>
+</blockquote>
+</li>
+<li><p><strong>Avoid mixing text and images in a segmented control.</strong></p>
+<blockquote>
+<p>Although individual segments can contain text or images, mixing the two in a single control can lead to a disconnected and confusing interface.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Sliders"><a href="#Sliders" class="headerlink" title="Sliders"></a>Sliders</h2><ul>
+<li><p><strong>Don’t use a slider to adjust audio volume.</strong></p>
+<blockquote>
+<p>If you need to provide volume control in your app, use a volume view, which is customizable and includes a volume-level slider and a control for changing the active audio output device. To learn about implementing a volume view, see MPVolumeView.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Switches"><a href="#Switches" class="headerlink" title="Switches"></a>Switches</h2><ul>
+<li><p><strong>Use switches in table rows only.</strong></p>
+<blockquote>
+<p>Switches are intended for use in tables, such as in a list of settings that can be toggled on and off. If you need similar functionality <code>in a toolbar or navigation bar, use a button instead</code>, and <code>provide two distinct icons that communicate the states</code>.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Text-Fields"><a href="#Text-Fields" class="headerlink" title="Text Fields"></a>Text Fields</h2><ul>
+<li><p><strong>Show a hint in a text field to help communicate purpose.</strong></p>
+<blockquote>
+<p>A text field can contain placeholder text—such as “Email” or “Password”—when there’s no other text in the field. Don’t use a separate label to describe a text field when placeholder text is sufficient.</p>
+</blockquote>
+</li>
+<li><p><strong>Display a Clear button in the right end of a text field when appropriate.</strong></p>
+<blockquote>
+<p>When this element is present, tapping it clears the contents of the text field, eliminating the need to keep tapping the Delete key.</p>
+</blockquote>
+</li>
+<li><p><strong>Use secure text fields when appropriate.</strong></p>
+<blockquote>
+<p>Always use a secure text field when your app asks for sensitive data, such as a password.</p>
+</blockquote>
+</li>
+<li><p><strong>Use images and buttons to provide clarity and functionality in text fields.</strong></p>
+<blockquote>
+<p>You can display custom images in the left or right sides of a text field, or you can add a system-provided button, such as the Bookmarks button. In general, use the left end of a text field to indicate a field’s purpose and the right end to indicate the presence of additional features, such as bookmarking.</p>
+</blockquote>
+</li>
+</ul>
+
       
     </div>
     
@@ -821,7 +1277,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#App-Architecture"><span class="nav-number">1.</span> <span class="nav-text">App Architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Loading"><span class="nav-number">1.1.</span> <span class="nav-text">Loading</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modality"><span class="nav-number">1.2.</span> <span class="nav-text">Modality</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Onboarding"><span class="nav-number">1.3.</span> <span class="nav-text">Onboarding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Settings"><span class="nav-number">1.4.</span> <span class="nav-text">Settings</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#User-Interaction"><span class="nav-number">2.</span> <span class="nav-text">User Interaction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3D-Touch"><span class="nav-number">2.1.</span> <span class="nav-text">3D Touch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Authentication"><span class="nav-number">2.2.</span> <span class="nav-text">Authentication</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Face-ID-and-Touch-ID"><span class="nav-number">2.2.1.</span> <span class="nav-text">Face ID and Touch ID</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Entry"><span class="nav-number">2.3.</span> <span class="nav-text">Data Entry</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Feedback"><span class="nav-number">2.4.</span> <span class="nav-text">Feedback</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-Handling"><span class="nav-number">2.5.</span> <span class="nav-text">File Handling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gestures"><span class="nav-number">2.6.</span> <span class="nav-text">Gestures</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Undo-and-Redo"><span class="nav-number">2.7.</span> <span class="nav-text">Undo and Redo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#System-Capabilities"><span class="nav-number">3.</span> <span class="nav-text">System Capabilities</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Notifications"><span class="nav-number">3.1.</span> <span class="nav-text">Notifications</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Designing-a-Great-Notification-Experience"><span class="nav-number">3.1.1.</span> <span class="nav-text">Designing a Great Notification Experience</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Badging"><span class="nav-number">3.1.2.</span> <span class="nav-text">Badging</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ratings-and-Reviews"><span class="nav-number">3.2.</span> <span class="nav-text">Ratings and Reviews</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#System-Rating-and-Review-Prompts"><span class="nav-number">3.2.1.</span> <span class="nav-text">System Rating and Review Prompts</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Visual-Design"><span class="nav-number">4.</span> <span class="nav-text">Visual Design</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Adaptivity-and-Layout"><span class="nav-number">4.1.</span> <span class="nav-text">Adaptivity and Layout</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Layout-Considerations"><span class="nav-number">4.1.1.</span> <span class="nav-text">Layout Considerations</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Color"><span class="nav-number">4.2.</span> <span class="nav-text">Color</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminology"><span class="nav-number">4.3.</span> <span class="nav-text">Terminology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typography"><span class="nav-number">4.4.</span> <span class="nav-text">Typography</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dynamic-Type-Sizes"><span class="nav-number">4.4.1.</span> <span class="nav-text">Dynamic Type Sizes</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Icons-and-Images"><span class="nav-number">5.</span> <span class="nav-text">Icons and Images</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-Size-and-Resolution"><span class="nav-number">5.1.</span> <span class="nav-text">Image Size and Resolution</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Designing-High-Resolution-Artwork"><span class="nav-number">5.1.1.</span> <span class="nav-text">Designing High-Resolution Artwork</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#App-Icon"><span class="nav-number">5.2.</span> <span class="nav-text">App Icon</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#App-Icon-Sizes"><span class="nav-number">5.2.1.</span> <span class="nav-text">App Icon Sizes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spotlight-Settings-and-Notification-Icons"><span class="nav-number">5.2.2.</span> <span class="nav-text">Spotlight, Settings, and Notification Icons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#User-Selectable-App-Icons"><span class="nav-number">5.2.3.</span> <span class="nav-text">User-Selectable App Icons</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Custom-Icons"><span class="nav-number">5.3.</span> <span class="nav-text">Custom Icons</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#App-Architecture"><span class="nav-number">1.</span> <span class="nav-text">App Architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Loading"><span class="nav-number">1.1.</span> <span class="nav-text">Loading</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modality"><span class="nav-number">1.2.</span> <span class="nav-text">Modality</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Onboarding"><span class="nav-number">1.3.</span> <span class="nav-text">Onboarding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Settings"><span class="nav-number">1.4.</span> <span class="nav-text">Settings</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#User-Interaction"><span class="nav-number">2.</span> <span class="nav-text">User Interaction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3D-Touch"><span class="nav-number">2.1.</span> <span class="nav-text">3D Touch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Authentication"><span class="nav-number">2.2.</span> <span class="nav-text">Authentication</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Face-ID-and-Touch-ID"><span class="nav-number">2.2.1.</span> <span class="nav-text">Face ID and Touch ID</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Entry"><span class="nav-number">2.3.</span> <span class="nav-text">Data Entry</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Feedback"><span class="nav-number">2.4.</span> <span class="nav-text">Feedback</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-Handling"><span class="nav-number">2.5.</span> <span class="nav-text">File Handling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gestures"><span class="nav-number">2.6.</span> <span class="nav-text">Gestures</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Undo-and-Redo"><span class="nav-number">2.7.</span> <span class="nav-text">Undo and Redo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#System-Capabilities"><span class="nav-number">3.</span> <span class="nav-text">System Capabilities</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Notifications"><span class="nav-number">3.1.</span> <span class="nav-text">Notifications</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Designing-a-Great-Notification-Experience"><span class="nav-number">3.1.1.</span> <span class="nav-text">Designing a Great Notification Experience</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Badging"><span class="nav-number">3.1.2.</span> <span class="nav-text">Badging</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ratings-and-Reviews"><span class="nav-number">3.2.</span> <span class="nav-text">Ratings and Reviews</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#System-Rating-and-Review-Prompts"><span class="nav-number">3.2.1.</span> <span class="nav-text">System Rating and Review Prompts</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Visual-Design"><span class="nav-number">4.</span> <span class="nav-text">Visual Design</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Adaptivity-and-Layout"><span class="nav-number">4.1.</span> <span class="nav-text">Adaptivity and Layout</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Layout-Considerations"><span class="nav-number">4.1.1.</span> <span class="nav-text">Layout Considerations</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Color"><span class="nav-number">4.2.</span> <span class="nav-text">Color</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminology"><span class="nav-number">4.3.</span> <span class="nav-text">Terminology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typography"><span class="nav-number">4.4.</span> <span class="nav-text">Typography</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dynamic-Type-Sizes"><span class="nav-number">4.4.1.</span> <span class="nav-text">Dynamic Type Sizes</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Icons-and-Images"><span class="nav-number">5.</span> <span class="nav-text">Icons and Images</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Image-Size-and-Resolution"><span class="nav-number">5.1.</span> <span class="nav-text">Image Size and Resolution</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Designing-High-Resolution-Artwork"><span class="nav-number">5.1.1.</span> <span class="nav-text">Designing High-Resolution Artwork</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#App-Icon"><span class="nav-number">5.2.</span> <span class="nav-text">App Icon</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#App-Icon-Sizes"><span class="nav-number">5.2.1.</span> <span class="nav-text">App Icon Sizes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spotlight-Settings-and-Notification-Icons"><span class="nav-number">5.2.2.</span> <span class="nav-text">Spotlight, Settings, and Notification Icons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#User-Selectable-App-Icons"><span class="nav-number">5.2.3.</span> <span class="nav-text">User-Selectable App Icons</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Custom-Icons"><span class="nav-number">5.3.</span> <span class="nav-text">Custom Icons</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Custom-Icon-Sizes"><span class="nav-number">5.3.1.</span> <span class="nav-text">Custom Icon Sizes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Launch-Screen"><span class="nav-number">5.4.</span> <span class="nav-text">Launch Screen</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Static-Launch-Screen-Images"><span class="nav-number">5.4.1.</span> <span class="nav-text">Static Launch Screen Images</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Icons"><span class="nav-number">5.5.</span> <span class="nav-text">System Icons</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Navigation-Bar-and-Toolbar-Icons"><span class="nav-number">5.5.1.</span> <span class="nav-text">Navigation Bar and Toolbar Icons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Home-Screen-Quick-Action-Icons"><span class="nav-number">5.5.2.</span> <span class="nav-text">Home Screen Quick Action Icons</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bars"><span class="nav-number">6.</span> <span class="nav-text">Bars</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Navigation-Bars"><span class="nav-number">6.1.</span> <span class="nav-text">Navigation Bars</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Navigation-Bar-Controls"><span class="nav-number">6.1.1.</span> <span class="nav-text">Navigation Bar Controls</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Search-Bars"><span class="nav-number">6.2.</span> <span class="nav-text">Search Bars</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Status-Bars"><span class="nav-number">6.3.</span> <span class="nav-text">Status Bars</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tab-Bars"><span class="nav-number">6.4.</span> <span class="nav-text">Tab Bars</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Toolbars"><span class="nav-number">6.5.</span> <span class="nav-text">Toolbars</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TIP"><span class="nav-number">6.5.1.</span> <span class="nav-text">TIP</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Views"><span class="nav-number">7.</span> <span class="nav-text">Views</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Action-Sheets"><span class="nav-number">7.1.</span> <span class="nav-text">Action Sheets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Activity-Views"><span class="nav-number">7.2.</span> <span class="nav-text">Activity Views</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Alerts"><span class="nav-number">7.3.</span> <span class="nav-text">Alerts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Alert-Titles-and-Messages"><span class="nav-number">7.3.1.</span> <span class="nav-text">Alert Titles and Messages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Alert-Buttons"><span class="nav-number">7.3.2.</span> <span class="nav-text">Alert Buttons</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collections"><span class="nav-number">7.4.</span> <span class="nav-text">Collections</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pages"><span class="nav-number">7.5.</span> <span class="nav-text">Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scroll-Views"><span class="nav-number">7.6.</span> <span class="nav-text">Scroll Views</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tables"><span class="nav-number">7.7.</span> <span class="nav-text">Tables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Table-Rows"><span class="nav-number">7.7.1.</span> <span class="nav-text">Table Rows</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Text-Views"><span class="nav-number">7.8.</span> <span class="nav-text">Text Views</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web-Views"><span class="nav-number">7.9.</span> <span class="nav-text">Web Views</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Controls"><span class="nav-number">8.</span> <span class="nav-text">Controls</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Buttons"><span class="nav-number">8.1.</span> <span class="nav-text">Buttons</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#System-Buttons"><span class="nav-number">8.1.1.</span> <span class="nav-text">System Buttons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Detail-Disclosure-Buttons"><span class="nav-number">8.1.2.</span> <span class="nav-text">Detail Disclosure Buttons</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Edit-Menus"><span class="nav-number">8.2.</span> <span class="nav-text">Edit Menus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-Controls"><span class="nav-number">8.3.</span> <span class="nav-text">Page Controls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pickers"><span class="nav-number">8.4.</span> <span class="nav-text">Pickers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Progress-Indicators"><span class="nav-number">8.5.</span> <span class="nav-text">Progress Indicators</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Progress-Bars"><span class="nav-number">8.5.1.</span> <span class="nav-text">Progress Bars</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Network-Activity-Indicators"><span class="nav-number">8.5.2.</span> <span class="nav-text">Network Activity Indicators</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Refresh-Content-Controls"><span class="nav-number">8.6.</span> <span class="nav-text">Refresh Content Controls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Segmented-Controls"><span class="nav-number">8.7.</span> <span class="nav-text">Segmented Controls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sliders"><span class="nav-number">8.8.</span> <span class="nav-text">Sliders</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switches"><span class="nav-number">8.9.</span> <span class="nav-text">Switches</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Text-Fields"><span class="nav-number">8.10.</span> <span class="nav-text">Text Fields</span></a></li></ol></li></ol></div>
             
 
           </div>
