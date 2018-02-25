@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="UI," />
+  <meta name="keywords" content="Weekly Summary," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="In iOS there is a distinction between the coordinates you specify in your drawing code and the pixels of the underlying device. When using native drawing technologies such as Quartz, UIKit, and Core A">
-<meta name="keywords" content="UI">
+<meta name="description" content="placeholder in UITextField123if let placeholderLabel = textField.value(forKey: &quot;_placeholderLabel&quot;) as ? UILabel &amp;#123;	placeholderLabel.adjustFontSizeToFitSize = true&amp;#125;">
+<meta name="keywords" content="Weekly Summary">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Points Versus Pixels">
-<meta property="og:url" content="http://namazu923.github.io/2017/11/06/Points-Versus-Pixels/index.html">
+<meta property="og:title" content="Weekly Summary W8 (2.19-2.25)">
+<meta property="og:url" content="http://namazu923.github.io/2018/02/25/Weekly-Summary-W8-2-19-2-25/index.html">
 <meta property="og:site_name" content="鯰">
-<meta property="og:description" content="In iOS there is a distinction between the coordinates you specify in your drawing code and the pixels of the underlying device. When using native drawing technologies such as Quartz, UIKit, and Core A">
+<meta property="og:description" content="placeholder in UITextField123if let placeholderLabel = textField.value(forKey: &quot;_placeholderLabel&quot;) as ? UILabel &amp;#123;	placeholderLabel.adjustFontSizeToFitSize = true&amp;#125;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-06T12:59:25.000Z">
+<meta property="og:updated_time" content="2018-02-25T05:47:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Points Versus Pixels">
-<meta name="twitter:description" content="In iOS there is a distinction between the coordinates you specify in your drawing code and the pixels of the underlying device. When using native drawing technologies such as Quartz, UIKit, and Core A">
+<meta name="twitter:title" content="Weekly Summary W8 (2.19-2.25)">
+<meta name="twitter:description" content="placeholder in UITextField123if let placeholderLabel = textField.value(forKey: &quot;_placeholderLabel&quot;) as ? UILabel &amp;#123;	placeholderLabel.adjustFontSizeToFitSize = true&amp;#125;">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://namazu923.github.io/2017/11/06/Points-Versus-Pixels/"/>
+  <link rel="canonical" href="http://namazu923.github.io/2018/02/25/Weekly-Summary-W8-2-19-2-25/"/>
 
 
 
 
 
-  <title>Points Versus Pixels | 鯰</title>
+  <title>Weekly Summary W8 (2.19-2.25) | 鯰</title>
   
 
 
@@ -291,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://namazu923.github.io/2017/11/06/Points-Versus-Pixels/">
+    <link itemprop="mainEntityOfPage" href="http://namazu923.github.io/2018/02/25/Weekly-Summary-W8-2-19-2-25/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="鯰">
@@ -308,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Points Versus Pixels</h1>
+          <h1 class="post-title" itemprop="name headline">Weekly Summary W8 (2.19-2.25)</h1>
         
 
         <div class="post-meta">
@@ -320,8 +320,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T20:43:13+08:00">
-                2017-11-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-25T12:46:53+08:00">
+                2018-02-25
               </time>
             
 
@@ -343,8 +343,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/UI/" itemprop="url" rel="index">
-                    <span itemprop="name">UI</span>
+                  <a href="/categories/Weekly-Summary/" itemprop="url" rel="index">
+                    <span itemprop="name">Weekly Summary</span>
                   </a>
                 </span>
 
@@ -361,9 +361,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/11/06/Points-Versus-Pixels/#comments" itemprop="discussionUrl">
+                <a href="/2018/02/25/Weekly-Summary-W8-2-19-2-25/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/11/06/Points-Versus-Pixels/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/02/25/Weekly-Summary-W8-2-19-2-25/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -391,16 +391,21 @@
       
 
       
-        <p>In iOS there is a distinction between the coordinates you specify in your drawing code and the pixels of the underlying device. When using native drawing technologies such as Quartz, UIKit, and Core Animation, the drawing coordinate space and the view’s coordinate space are both logical coordinate spaces, with distances measured in <font color="blue"><strong>points</strong></font>. These logical coordinate systems are decoupled from the device coordinate space used by the system frameworks to manage the <font color="blue"><strong>pixels</strong> onscreen</font>.</p>
-<p>The system automatically maps points in the view’s coordinate space to pixels in the device coordinate space, but this mapping is not always one-to-one. This behavior leads to an important fact that you should always remember:</p>
-<ul>
-<li><strong>One point does not necessarily correspond to one physical pixel.</strong><a id="more"></a>
-The purpose of using points (and the logical coordinate system) is <font color="blue">to provide a consistent size of output that is device independent</font>. For most purposes, the actual size of a point is irrelevant. The goal of points is to provide a relatively consistent scale that you can use in your code to specify the size and position of views and rendered content. How points are actually mapped to pixels is a detail that is handled by the system frameworks. For example, on a device with a high-resolution screen, a line that is one point wide may actually result in a line that is two physical pixels wide. The result is that if you draw the same content on two similar devices, with only one of them having a high-resolution screen, the content appears to be about the same size on both devices.</li>
-</ul>
-<blockquote>
-<p>Note: In the context of PDF rendering and printing, Core Graphics defines “point” using the industry standard mapping of one point to 1/72 of an inch.</p>
+        <h1 id="placeholder-in-UITextField"><a href="#placeholder-in-UITextField" class="headerlink" title="placeholder in UITextField"></a>placeholder in UITextField</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="keyword">let</span> placeholderLabel = textField.value(forKey: <span class="string">"_placeholderLabel"</span>) <span class="keyword">as</span> ? <span class="type">UILabel</span> &#123;</div><div class="line">	placeholderLabel.adjustFontSizeToFitSize = <span class="literal">true</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="CLLocationManager"><a href="#CLLocationManager" class="headerlink" title="CLLocationManager"></a>CLLocationManager</h1><h2 id="Judge-if-current-service-is-enabled"><a href="#Judge-if-current-service-is-enabled" class="headerlink" title="Judge if current service is enabled"></a>Judge if current service is enabled</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="type">CLLocationManager</span>.locationServiceEnabled()</div></pre></td></tr></table></figure>
+<h2 id="Request-authorization"><a href="#Request-authorization" class="headerlink" title="Request authorization"></a>Request authorization</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">requestWhenInUseAuthorization()</div></pre></td></tr></table></figure>
+<h2 id="desiredAccuray"><a href="#desiredAccuray" class="headerlink" title="desiredAccuray"></a>desiredAccuray</h2><h2 id="distanceFilter"><a href="#distanceFilter" class="headerlink" title="distanceFilter"></a>distanceFilter</h2><h1 id="Facebook-share"><a href="#Facebook-share" class="headerlink" title="Facebook share"></a>Facebook share</h1><p>Reference:<br><a href="https://developers.facebook.com/docs/sharing/ios" target="_blank" rel="external">share in iOS</a></p>
+<h1 id="Twitter-share"><a href="#Twitter-share" class="headerlink" title="Twitter share"></a>Twitter share</h1><p>Reference:<br><a href="https://github.com/twitter/twitter-kit-ios/wiki/Installation" target="_blank" rel="external">twitter-kit-iOS</a></p>
+<p>#Barcode<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="type">AVCaptureDevice</span></div></pre></td></tr></table></figure></p>
+<h1 id="Open-Settings-URL"><a href="#Open-Settings-URL" class="headerlink" title="Open Settings URL"></a>Open Settings URL</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="type">UIApplication</span>.shared.openURL(<span class="type">URL</span>(<span class="type">String</span>: <span class="type">UIApplicationOpenSettingsURLString</span>)!)</div></pre></td></tr></table></figure>
+<h1 id="Deep-Link"><a href="#Deep-Link" class="headerlink" title="Deep Link"></a>Deep Link</h1><h2 id="Set-URL-scheme"><a href="#Set-URL-scheme" class="headerlink" title="Set URL scheme"></a>Set URL scheme</h2><blockquote>
+<p>TARGET -&gt; Info -&gt; URL Types -&gt; URL Schemes -&gt; app url scheme</p>
 </blockquote>
-<p>Reference:<br><a href="https://developer.apple.com/library/content/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/GraphicsDrawingOverview/GraphicsDrawingOverview.html" target="_blank" rel="external">Drawing and Printing Guide for iOS</a></p>
+<p>Reference:<a href="https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html" target="_blank" rel="external">Inter-App Communication</a></p>
+<h1 id="Open-another-app"><a href="#Open-another-app" class="headerlink" title="Open another app"></a>Open another app</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if UIApplication.shared.canOpenURL(app_scheme_url) &#123;</div><div class="line">	UIApplication.shared.openURL(app_scheme_url)</div><div class="line">&#125; else &#123;</div><div class="line">	UIApplication.shared.openURL(app_sotre_url)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="Xcode-Swift-executable-size-much-bigger-than-Objective-C-executable"><a href="#Xcode-Swift-executable-size-much-bigger-than-Objective-C-executable" class="headerlink" title="Xcode Swift executable size much bigger than Objective-C executable"></a>Xcode Swift executable size much bigger than Objective-C executable</h1><p>because swift executable file contains all framework files</p>
+<p>Reference:<a href="https://stackoverflow.com/questions/28741895/xcode-swift-executable-size-much-bigger-than-objective-c-executable" target="_blank" rel="external">Xcode Swift executable size much bigger than Objective-C executable</a></p>
 
       
     </div>
@@ -418,7 +423,7 @@ The purpose of using points (and the logical coordinate system) is <font color="
       
         <div class="post-tags">
           
-            <a href="/tags/UI/" rel="tag"># UI</a>
+            <a href="/tags/Weekly-Summary/" rel="tag"># Weekly Summary</a>
           
         </div>
       
@@ -431,8 +436,8 @@ The purpose of using points (and the logical coordinate system) is <font color="
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/29/WWDC-Check-List/" rel="next" title="WWDC List">
-                <i class="fa fa-chevron-left"></i> WWDC List
+              <a href="/2018/02/06/Weekly-Summary-W6-2-5-2-11/" rel="next" title="Weekly Summary W6 (2.5-2.11)">
+                <i class="fa fa-chevron-left"></i> Weekly Summary W6 (2.5-2.11)
               </a>
             
           </div>
@@ -440,10 +445,6 @@ The purpose of using points (and the logical coordinate system) is <font color="
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/16/Git/" rel="prev" title="Git">
-                Git <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -505,8 +506,17 @@ The purpose of using points (and the logical coordinate system) is <font color="
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -572,6 +582,22 @@ The purpose of using points (and the logical coordinate system) is <font color="
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#placeholder-in-UITextField"><span class="nav-number">1.</span> <span class="nav-text">placeholder in UITextField</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CLLocationManager"><span class="nav-number">2.</span> <span class="nav-text">CLLocationManager</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Judge-if-current-service-is-enabled"><span class="nav-number">2.1.</span> <span class="nav-text">Judge if current service is enabled</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Request-authorization"><span class="nav-number">2.2.</span> <span class="nav-text">Request authorization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#desiredAccuray"><span class="nav-number">2.3.</span> <span class="nav-text">desiredAccuray</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#distanceFilter"><span class="nav-number">2.4.</span> <span class="nav-text">distanceFilter</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Facebook-share"><span class="nav-number">3.</span> <span class="nav-text">Facebook share</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Twitter-share"><span class="nav-number">4.</span> <span class="nav-text">Twitter share</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Open-Settings-URL"><span class="nav-number">5.</span> <span class="nav-text">Open Settings URL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Deep-Link"><span class="nav-number">6.</span> <span class="nav-text">Deep Link</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-URL-scheme"><span class="nav-number">6.1.</span> <span class="nav-text">Set URL scheme</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Open-another-app"><span class="nav-number">7.</span> <span class="nav-text">Open another app</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Xcode-Swift-executable-size-much-bigger-than-Objective-C-executable"><span class="nav-number">8.</span> <span class="nav-text">Xcode Swift executable size much bigger than Objective-C executable</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -736,9 +762,9 @@ The purpose of using points (and the logical coordinate system) is <font color="
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://namazu923.github.io/2017/11/06/Points-Versus-Pixels/';
-          this.page.identifier = '2017/11/06/Points-Versus-Pixels/';
-          this.page.title = 'Points Versus Pixels';
+          this.page.url = 'http://namazu923.github.io/2018/02/25/Weekly-Summary-W8-2-19-2-25/';
+          this.page.identifier = '2018/02/25/Weekly-Summary-W8-2-19-2-25/';
+          this.page.title = 'Weekly Summary W8 (2.19-2.25)';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
